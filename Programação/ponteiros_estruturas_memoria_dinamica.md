@@ -1,43 +1,8 @@
-# Algoritmos & Stuff
-
-## Algortimo de ordenação -> BubbleSort
-```c
-#include <stdio.h>
-
-void bubbleSort(int array[], int size)
-{
-  for (int step = 1; step < size ; ++step)
-  {
-    for (int i = 0; i < size - step - 1; ++i)
-    {
-      // To sort in descending order, change">" to "<".
-      if (array[i] > array[i + 1])
-      {
-        int temp = array[i];
-        array[i] = array[i + 1];
-        array[i + 1] = temp;
-      }
-    }
-  }
-}
-```
-```c
-for com o começo i = 1 até ao total do array
-    for com j = 0, até ao total-i
-        se(string1 > string2)
-            auxiliar = string1
-            string1 = string2
-            string2 = auxiliar
-```
-## Algoritmo eliminação ordenada 
-```c
-Encontrar a posiçao do elemento a eliminar 
-Fazer  for j = pos até j < tamanho-1
-    depois pegar no array[j] = array[j+1]
-```
+# Apontamentos de C
 
 # Ponteiros
 *Um ponteiro é uma variável capaz de armazenar um endereço de memória ou o endereço de outra variável.*
+
 ![ponteiros1](https://user-images.githubusercontent.com/12052283/78192428-0a86ff80-7470-11ea-8491-08e483b1ca4d.png)
 
 
@@ -120,6 +85,7 @@ b = a;         // **b** aponta para o mesmo lugar que **a**,
 ```
 ## Ponteiros e Vetores
 *Em C, os elementos de um vetor são sempre guardados sequencialmente, a uma distância fixa um do outro. Com isso, é possível facilmente passar de um elemento a outro, percorrendo sempre uma mesma distância para frente ou para trás na memória. Dessa maneira, podemos usar ponteiros e a aritmética de ponteiros para percorrer vetores. Na verdade, vetores _são_ ponteiros ― um uso particular dos ponteiros.*
+
 __Exemplo__
 ```c
 #include <stdio.h>
@@ -263,7 +229,6 @@ struct dados {
  };
 ```
 
-![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Structure-In-C.png =350x)
 ## Declarando variaveis
 ```c
 struct dados m;
