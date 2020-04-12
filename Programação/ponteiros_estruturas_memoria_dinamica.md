@@ -420,6 +420,7 @@ int main(){
 ```
 #### free
 *As variáveis alocadas estaticamente dentro de uma função, também conhecidas como variáveis locais, desaparecem assim que a execução da função termina. Já as variáveis alocadas dinamicamente continuam a existir mesmo depois que a execução da função termina. Se for necessário limpar a memória ocupada por essas variáveis, é preciso recorrer à função free.*
+
 ```c
 void free(void *p);
 ```
