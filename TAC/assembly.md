@@ -43,7 +43,9 @@ __Resolução__
 
 __Nota 1 : BX(dados) -> DS / BP(pilha) -> SS__
 
-__Nota 2 : SI(dados) -> DS / DI(dados)__ 
+__Nota 2 : SI(dados) -> DS / DI(dados)__
+
+__Nota 3: tem parenteses retos ? então é por memoria__
 
 __→ Por Registo__      
 
@@ -75,7 +77,28 @@ __→ Por memória__
             MOV DL, 100h[BX][SI] -> Copiar o valor de DS:(100h+BX+SI) para DL
 
 __Exercicio__
-colocar aqui o exercicio 3
+
+*De seguida temos um exercicio para esclarecer melhor esta parte.*
+
+*Primeiro temos os dados que o exercicio dá.*
+
+*O esboço do lado direito serve de ajuda.*
+
+![image](https://user-images.githubusercontent.com/12052283/79146524-734c7100-7dba-11ea-86b9-22f2cca751b7.png)
+
+![image](https://user-images.githubusercontent.com/12052283/79146827-df2ed980-7dba-11ea-9f17-1fb1d34b1941.png)
+
+__Resolução__
+
+__Atenção que só é preciso calcular endereços virutais e reais quando estamos na presença de um registo por memória.__
+
+![Untitled Diagram (20)](https://user-images.githubusercontent.com/12052283/79150435-b01b6680-7dc0-11ea-9a2d-0b18ec5f48b8.png)
+
+
+![Untitled Diagram (21)](https://user-images.githubusercontent.com/12052283/79152575-5d43ae00-7dc4-11ea-9dfe-0ebcd8851b0c.png)
+
+![Untitled Diagram (22)](https://user-images.githubusercontent.com/12052283/79160366-933b5f00-7dd1-11ea-8a98-c230854e6a35.png)
+
 
 
 ## DOSBOX
@@ -146,3 +169,14 @@ __IMPORTANTE__
 
 __Nota__ : *Com isto conseguimos perceber que as variáveis que tiverem mais do que 1 byte sao invertidas.*
 *Será invertida sempre de byte a byte, ou seja, se tivermos __C1180000__ , aparecerá __000018C1__.*
+
+
+__Exercicio__
+
+![image](https://user-images.githubusercontent.com/12052283/79161828-0e057980-7dd4-11ea-96e0-de417fded23a.png)
+
+__Resolução__
+
+![image](https://user-images.githubusercontent.com/12052283/79162472-3c378900-7dd5-11ea-8bc2-46332d8b6334.png)
+
+
