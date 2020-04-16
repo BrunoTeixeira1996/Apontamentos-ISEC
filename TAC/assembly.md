@@ -153,7 +153,8 @@ __Variaveis com sinal começam sempre por "S"__
 
 *Podemos declarar variáveis com valores decimais, binários ou hexadecimais.*
 
-![Untitled Diagram (17)](https://user-images.githubusercontent.com/12052283/79075295-d8846180-7ce9-11ea-8366-cf64a8c856cf.png)
+![Untitled Diagram(17)](https://user-images.githubusercontent.com/12052283/79510131-b31e8d00-8034-11ea-8b71-d8dcdb946879.png)
+
 
 *No caso de querermos usar um numero real, se nao declararmos o valor com uma virgula flutuante dará um erro de compilação.*
 
@@ -180,3 +181,7 @@ __Resolução__
 ![image](https://user-images.githubusercontent.com/12052283/79162472-3c378900-7dd5-11ea-8bc2-46332d8b6334.png)
 
 
+__var2w word -28__
+*Apesar da variavel ser sem sinal, passamos sempre para C2 uma vez que o numero é negativo, colocamos com 8 bits e depois acrescentamos os outros 8 bits dando FFE4 em hex na memoria(ja invertido).*
+
+__var3dw sdword -28 = -28 (10) = FFE4h(C2) = FF FF FF E4h(C2)__
