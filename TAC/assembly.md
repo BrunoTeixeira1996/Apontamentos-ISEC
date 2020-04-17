@@ -185,3 +185,61 @@ __var2w word -28__
 *Apesar da variavel ser sem sinal, passamos sempre para C2 uma vez que o numero é negativo, colocamos com 8 bits e depois acrescentamos os outros 8 bits dando FFE4 em hex na memoria(ja invertido).*
 
 __var3dw sdword -28 = -28 (10) = FFE4h(C2) = FF FF FF E4h(C2)__
+
+## Movimentação
+
+__MOV__ → *Copia o valor de SRC(2º operando) para DEST(1º operando)*
+    
+    NUM WORD 2020
+    MOV AX, NUM ; Copia 2020 para AX
+
+__XCHG__ → *Troca o conteúdo dos operandos*
+
+    NUM WORD 2020
+    XCHG AX,NUM ; Pega no valor de AX  e copia para NUM e pega no vamor de NUM e copia para AX
+
+__LEA__ → *Copia para o primeiro operando o "deslocamento" do segundo*
+
+    TABELA WORD 10,20,30
+    MOV SI, 4 ; byte do array a que pretendemos aceder
+    MOV AX,TABELA[SI] ; vai buscar o valor do deslocamento
+
+![Untitled d](https://user-images.githubusercontent.com/12052283/79568156-4398b400-80ad-11ea-83eb-152ebf2ce782.png)
+
+
+## Aritmética
+
+__SOMAR (+)__
+
+__ADD__ → *Soma os 2 operandos e coloca o resultado no primeiro*
+
+    ADD NUM,3 ; NUM = NUM + 3
+
+__ADC__ → *Soma os 2 operandos e o __CARRY__*
+
+__CARRY__ → *Útil para o overflow*
+
+    ADC CX,5 ; CX = CX+5+CARRY
+
+__INC__ → *Incrementa o operando*
+
+    INC NUM; NUM = NUM + 1
+
+
+=======================================================================
+
+__SUBTRAIR (-)__
+
+__SUB__ → *Subtrai os 2 operandos e coloca o resultado no primeiro*
+
+    SUB NUM,3 ; NUM = NUM - 3
+
+__SBB__ → *Subtrai os 2 operandos e o CARRY*
+
+    SBB CX,5 ; CX = CX - 5 - CARRY
+
+__DEC__ → *Decrementa o operando*
+
+    DEC AL; AL = AL - 1
+
+=======================================================================
