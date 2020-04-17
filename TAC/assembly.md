@@ -226,7 +226,7 @@ __INC__ → *Incrementa o operando*
     INC NUM; NUM = NUM + 1
 
 
-=======================================================================
+
 
 __SUBTRAIR (-)__
 
@@ -242,4 +242,84 @@ __DEC__ → *Decrementa o operando*
 
     DEC AL; AL = AL - 1
 
-=======================================================================
+
+
+
+__MULTIPLICAR (*)__
+
+*MUL (SEM SINAL) / IMUL (COM SINAL)*
+
+__Operando(s) de 8 bits → AX = AL x Operando(8 bits)__
+
+    MOV AL,126
+    MOV CL, 3
+    MUL CL 
+    ; AX = 126 * 3
+
+__Operando(s) de 16 bits → DX:AX = AX * Operando(16 bits)__
+
+    MOV AX, 126
+    MOV CX, 3
+    MUL CX
+    ; DX:AX = 126 * 3
+
+![Untitled Diagram (121)](https://user-images.githubusercontent.com/12052283/79581573-81ec9e00-80c2-11ea-96b8-8b7f5480099f.png)
+
+
+
+
+__DIVIDIR (/)__
+
+*DIV (SEM SINAL) / IDIV (COM SINAL)*
+
+__Operando(s) de 8 bits → AL = AX / Operando__
+
+__AH = Resto; AL = Resultado__
+
+    MOV AX,127
+    MOV BL,4
+    DIV BL ; divisão de 8 bits
+    ; 127 : 4 = 31
+    ; AL = 31 Resultado
+    ; AH = 3 Resto
+
+__Operando(s) de 16 bits → AX = DX:AX / Operando__
+
+__AX = Resultado; DX = Resto__
+
+![Untitled Diagram 302)](https://user-images.githubusercontent.com/12052283/79583160-a8133d80-80c4-11ea-816e-1382a20a8823.png)
+
+
+
+__NEGAR (+/-)__
+
+__NEG → Complemento de 2 de um número__
+
+    MOV AL,28
+    NEG AL; -28(C2)
+    ; Se o nr for positivo fica negativo
+    ; Se o nr for negativo fica positivo
+
+
+__LÓGICA__
+
+__AND ('E') → Produto Lógico → Só dá 1 se ambos forem 1__
+
+    AND AL,00001111
+    ; forçar a zero os 4 bits menos significativos ('0')
+
+
+__OR ('OU') → Soma Lógica → Dá 1 se pelo menos um dos bits for 1__
+
+    OR AL, 00001111
+    ; forçar a '1' os 4 bits mais significativos ('1')
+
+__XOR → Soma Lógica Exclusiva → Dá 1 se apaneas um dos bits por 1__
+
+    XOR AL,00001111
+    ; inverte os 4 bits mais significativos ('1')
+
+__NOT → Negação → Inverte os bits do operando__
+
+    NOT AL
+    ; inverte todos os bits
