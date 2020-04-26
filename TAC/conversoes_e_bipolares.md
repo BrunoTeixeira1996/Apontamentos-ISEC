@@ -221,6 +221,8 @@ __M__ -> Mantissa
 
 __E__ -> Exponente
 
+## IMPORTANTE
+__Aqui ao agruparmos os numeros de binario para hexadecimal, temos de fazer da esquerda para a direita__
 
 ## Exercicio
 
@@ -245,3 +247,4 @@ __E__ -> Exponente
 
 ![Untitled Diagram (13)](https://user-images.githubusercontent.com/12052283/79051892-a7912780-7c2a-11ea-890e-008104200579.png)
 
+# Atenção -> o resultado certo é 1,0625

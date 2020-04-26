@@ -1,5 +1,3 @@
-# Apontamentos de C
-
 # Ponteiros
 *Um ponteiro é uma variável capaz de armazenar um endereço de memória ou o endereço de outra variável.*
 
