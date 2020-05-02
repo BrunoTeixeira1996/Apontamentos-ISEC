@@ -53,12 +53,16 @@ __g)__
 
 __h)__
 
-    Não podemos trocar a linha para algo quivalente porque no MOV não podemos usar um registo de segmentos(DS) juntamente com um valor imediato(DATA_HERE)
+    Não podemos trocar a linha para algo quivalente
+    Porque no MOV não podemos usar um registo de segmentos(DS)
+    juntamente com um valor imediato(DATA_HERE)
 
 
 __i)__
 
-    O CMP faz uma subtração. Se o resultado da subtração for zero, então ele sabe que são iguais, se for negativo ele sabe que o "dest" > "src", se for positivo "dest" < "src"
+    O CMP faz uma subtração. Se o resultado da subtração for
+     zero, então ele sabe que são iguais, se for negativo ele
+     sabe que o "dest" > "src", se for positivo "dest" < "src"
 
     CMP AL,AH = AL = AL-AH , sem afetar o valor de AL
 
@@ -73,7 +77,8 @@ __j)__
 
 __k)__
 
-    O programa compara dois valores e descobre qual deles é o maior, depois de fazer isto, armazena na variavel "greater" o maior valor.
+    O programa compara dois valores e descobre qual deles é o maior, depois de fazer isto, armazena na variavel
+     "greater" o maior valor.
 
 
 __Ex 8__
@@ -92,7 +97,10 @@ __Resposta__
 
 __O que acontece na linha 20?__
 
-    Basicamente sabemos que a soma irá ter ser 12Ch, logo temos de atribuir a flag Carry ao AH para contar o valor de 16 bits no AX. Então somamos o AH+CARRY(que neste caso é 1) + 0 porque o adc requer sempre um valor a seguir à virgula.
+    Basicamente sabemos que a soma irá ter ser 12Ch, logo temos de atribuir a flag Carry ao AH para contar o valor
+     de 16 bits no AX. Então somamos o AH+CARRY(que neste caso
+      é 1) + 0 porque o adc requer sempre um valor a seguir à
+       virgula.
 
 __Resultado no DOSBOX usando o CV__
 
