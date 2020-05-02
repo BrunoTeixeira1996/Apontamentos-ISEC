@@ -323,3 +323,78 @@ __NOT → Negação → Inverte os bits do operando__
 
     NOT AL
     ; inverte todos os bits
+
+
+## Instruções de controlo
+
+
+__Salto incondicional__
+
+    JMP
+
+
+![image](https://user-images.githubusercontent.com/12052283/80862893-5ba53180-8c70-11ea-995c-2bbe1c2f42f3.png)
+
+
+__Salto condicional__
+
+    CMP (condições - comparar números)
+    TEST (condições - testar bits)
+
+    Numeros(sem sinal):
+        JA,JB,JE,JNE, ...
+    
+    Numeros(com sinal):
+        JG(reater),JL(ess),JE(qual),JNE, ...
+
+    Flags:
+        JC,JZ,JS,JO,JP,JNC, ...
+        (C)arry,(Z)ero,(S)ignal,(O)verflow,(P)arity
+
+
+
+*JA* → Se 1Arg > 2Arg Salta
+
+
+*JB* → Se 1Arg < 2Arg Salta
+
+
+*JE* → Se 1Arg = 2Arg Salta
+
+
+*JG*  → Se 1Arg > 2Arg Salta
+
+*JL* → Se 1Arg < 2Arg Salta
+
+
+![image](https://user-images.githubusercontent.com/12052283/80863063-7a57f800-8c71-11ea-8055-44827959a036.png)
+
+
+
+![image](https://user-images.githubusercontent.com/12052283/80863239-cb1c2080-8c72-11ea-8ced-8a8a4eb35b22.png)
+
+
+__Exemplos de Ifs e Elses__
+
+![image](https://user-images.githubusercontent.com/12052283/80863798-7aa6c200-8c76-11ea-9361-4911c3f48fe5.png)
+
+
+
+__Exemplo de equivalencias__
+
+*JNA* = *JBE*
+
+    "JNA" → JUMP IF NOT ABOVE → SALTA SE NAO FOR MAIOR
+    "JBE" → JUMP IF BELOW OR EQUAL → SALTA SE FOR MENOR OU IGUAL
+
+
+__Chamada/retorno de funções__
+
+    CALL
+    RET
+
+
+![image](https://user-images.githubusercontent.com/12052283/80863746-4501d900-8c76-11ea-8980-4adf6b935a58.png)
+
+
+
