@@ -139,15 +139,16 @@ __Enunciado__
 
 __Resposta__
 
-![image](https://user-images.githubusercontent.com/12052283/81513775-6881ef00-931a-11ea-9fbd-6a758f055f50.png)
+![image](https://user-images.githubusercontent.com/12052283/81587126-1d152280-93a6-11ea-829c-3e884db44512.png)
+
 
 
 __Resultado no DOSBOX__
 
 *Depois de ter feito todas as iterações, conseguimos ver que o array soma, fica com todas somas feitas entre o array num1 e o array num2*
 
-*Os arrays num1 e num2 estão representados na zona de memória com um retangulo. O resultado está representado com circulos.*
+*O resultado está representado com circulos.*
 
+*Nota que no cv todas as vars com mais do que 1 byte invertem.*
 
-![image](https://user-images.githubusercontent.com/12052283/81513862-1d1c1080-931b-11ea-8731-2ac226a3294e.png)
-
+![image](https://user-images.githubusercontent.com/12052283/81586800-a0824400-93a5-11ea-8cce-772855ef96a9.png)
