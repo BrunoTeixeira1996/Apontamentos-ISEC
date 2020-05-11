@@ -106,3 +106,48 @@ __Resultado no DOSBOX usando o CV__
 
 ![image](https://user-images.githubusercontent.com/12052283/80865254-02dd9500-8c80-11ea-8f1f-b467de1c2fef.png)
 
+
+__Ex 9__
+
+
+__Enunciado__
+
+![image](https://user-images.githubusercontent.com/12052283/81513527-b39b0280-9318-11ea-9ec3-e490021d6490.png)
+
+![image](https://user-images.githubusercontent.com/12052283/81513557-e1804700-9318-11ea-8e69-8f150496abce.png)
+
+
+__Resposta__
+
+![image](https://user-images.githubusercontent.com/12052283/81513637-476cce80-9319-11ea-9e33-baaa2a49e1f4.png)
+
+__Resultado no DOSBOX__
+
+*Depois de ter feito todas as iterações*
+
+![image](https://user-images.githubusercontent.com/12052283/81513716-ef829780-9319-11ea-8cf6-95bedc7b2d5c.png)
+
+
+__Ex 10__
+
+
+__Enunciado__
+
+![image](https://user-images.githubusercontent.com/12052283/81513740-0cb76600-931a-11ea-9d13-cc2c489c17c9.png)
+
+![image](https://user-images.githubusercontent.com/12052283/81513752-20fb6300-931a-11ea-990c-5e63591092da.png)
+
+__Resposta__
+
+![image](https://user-images.githubusercontent.com/12052283/81513775-6881ef00-931a-11ea-9fbd-6a758f055f50.png)
+
+
+__Resultado no DOSBOX__
+
+*Depois de ter feito todas as iterações, conseguimos ver que o array soma, fica com todas somas feitas entre o array num1 e o array num2*
+
+*Os arrays num1 e num2 estão representados na zona de memória com um retangulo. O resultado está representado com circulos.*
+
+
+![image](https://user-images.githubusercontent.com/12052283/81513862-1d1c1080-931b-11ea-8731-2ac226a3294e.png)
+

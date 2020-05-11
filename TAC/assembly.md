@@ -398,3 +398,23 @@ __Chamada/retorno de funções__
 
 
 
+## Ciclos
+
+__Aqui nos ciclos, vamos na mesma usar estruturas de controlo__
+
+
+![image](https://user-images.githubusercontent.com/12052283/81513370-944fa580-9317-11ea-8efd-c33e6666f68d.png)
+
+![image](https://user-images.githubusercontent.com/12052283/81513408-d0830600-9317-11ea-8531-b841813827e7.png)
+
+__Neste caso do for, conseguimos fazer o mesmo com uma instrução mais pequena, no entanto em ves de incrementarmos o indice, vamos começar com o indice na posição final e decrementamos até ser 0.__
+
+__Usando para isso o LOOP__
+
+![image](https://user-images.githubusercontent.com/12052283/81513440-15a73800-9318-11ea-807c-4d6e21c8494f.png)
+
+*Analisando o __LOOP__ em baixo, conseguimos perceber melhor o que realmente faz.*
+
+![image](https://user-images.githubusercontent.com/12052283/81513453-353e6080-9318-11ea-8938-ef13e2ea34c2.png)
+
+*Ou seja, inicializamos o CX com o valor 100 (por exemplo). Depois começamos o ciclo, fazemos o que nos pedem, decrementamos o CX (fica agora com o valor 99), comparamos o CX com o 0 , e se não for igual, voltamos ao ciclo.*
