@@ -418,3 +418,47 @@ __Usando para isso o LOOP__
 ![image](https://user-images.githubusercontent.com/12052283/81513453-353e6080-9318-11ea-8938-ef13e2ea34c2.png)
 
 *Ou seja, inicializamos o CX com o valor 100 (por exemplo). Depois começamos o ciclo, fazemos o que nos pedem, decrementamos o CX (fica agora com o valor 99), comparamos o CX com o 0 , e se não for igual, voltamos ao ciclo.*
+
+
+## Arrays multidimensionais
+
+*O seu armazenamento é efetuado através de um mapeamento para um array unidimensonal.*
+
+![image](https://user-images.githubusercontent.com/12052283/83931146-b1e32400-a78a-11ea-954e-048baf270d49.png)
+
+
+## Memória de video (Importante)
+
+*Temos sempre 25 linhas e 80 colunas no monitor em assembly.*
+
+
+![image](https://user-images.githubusercontent.com/12052283/83931287-6e3cea00-a78b-11ea-9d5d-fb189769888e.png)
+
+
+![image](https://user-images.githubusercontent.com/12052283/83931401-0509a680-a78c-11ea-8cde-74a41acfda10.png)
+
+
+__Exemplo de código__
+
+![image](https://user-images.githubusercontent.com/12052283/83931427-3bdfbc80-a78c-11ea-8815-1debe42ecd31.png)
+
+
+__Exemplo no DOSBOX__
+
+![image](https://user-images.githubusercontent.com/12052283/83931583-038cae00-a78d-11ea-9256-1ab81dc25773.png)
+
+
+## Instruções de movimentação que manipulam dados da pilha
+
+*Como sabemos a pilha é utilizada essencialmente para guardar temporariamente registos e variaveis, passar parâmetros para um procedimento e armazenar variáveis locais.*
+
+__PUSH__ serve para escrever na Stack(Pilha)
+
+__POP__ retorna o ultimo valor escrito na Stack
+
+__NOTA__
+
+*Sempre que se dá PUSH de algo, temos obrigatoriamente de dar POP depois ou o código crasha.*
+
+Podemos usar o push e o pop para guardar registos no inicio e no fim de uma funcao.
+

@@ -152,3 +152,72 @@ __Resultado no DOSBOX__
 *Nota que no cv todas as vars com mais do que 1 byte invertem.*
 
 ![image](https://user-images.githubusercontent.com/12052283/81586800-a0824400-93a5-11ea-8cce-772855ef96a9.png)
+
+
+
+__Ex 11__
+
+__Enunciado__
+
+![image](https://user-images.githubusercontent.com/12052283/83927424-645fba80-a77c-11ea-8d37-b7ccc2c82180.png)
+
+![image](https://user-images.githubusercontent.com/12052283/83927468-86f1d380-a77c-11ea-9bcf-3f4177538761.png)
+
+
+__Resposta__
+
+
+![image](https://user-images.githubusercontent.com/12052283/83927490-9a9d3a00-a77c-11ea-86ca-8fe6ff0b6099.png)
+
+
+__Resultado no DOSBOX__
+
+
+![image](https://user-images.githubusercontent.com/12052283/83927393-4abe7300-a77c-11ea-9699-438f5b6ad596.png)
+
+
+__Ex 12__
+
+
+__Enunciado__
+
+![image](https://user-images.githubusercontent.com/12052283/83928228-7f332e80-a77e-11ea-8d63-391530241403.png)
+
+
+![image](https://user-images.githubusercontent.com/12052283/83928248-97a34900-a77e-11ea-8210-2710bc36e4a2.png)
+
+
+__Resposta__
+
+
+![image](https://user-images.githubusercontent.com/12052283/83928265-a689fb80-a77e-11ea-8cb0-f02bf56b89ab.png)
+
+
+__Resultado no DOSBOX__
+
+![image](https://user-images.githubusercontent.com/12052283/83928189-60cd3300-a77e-11ea-8b45-b45ead4efb1c.png)
+
+
+__Ex 14__
+
+__Enunciado__
+
+
+![image](https://user-images.githubusercontent.com/12052283/83930267-2a93b180-a786-11ea-93b7-b3e30893e497.png)
+
+![image](https://user-images.githubusercontent.com/12052283/83931066-397c6300-a78a-11ea-87f7-901e89c982e3.png)
+
+
+__Resposta__
+
+![image](https://user-images.githubusercontent.com/12052283/83930456-38960200-a787-11ea-9826-45c38e586cbc.png)
+
+
+__Ex 15__
+
+__Enunciado__
+
+
+__Resposta__
+
+![image](https://user-images.githubusercontent.com/12052283/83931012-f5895e00-a789-11ea-8ac8-722d8c90591e.png)
