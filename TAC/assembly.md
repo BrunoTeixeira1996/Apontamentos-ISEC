@@ -424,6 +424,18 @@ __Usando para isso o LOOP__
 
 *O seu armazenamento é efetuado através de um mapeamento para um array unidimensonal.*
 
+*Usamos praticamente sempre o row major ordering (é usado no C)*
+
+__Explicação da imagem em baixo relativamente ao Row Major Ordering__
+
+
+Como não podemos usar o array multidimensional, temos de fazer algumas operações uma vez que o array em memória está representado em forma de linha.
+
+Ao número a __verde__ 1(número da linha) multiplicamos o número de colunas (para avançar para a linha de baixo), somando com a coluna que pretendemos aceder.
+
+__(1*4)+2 = 6__ 
+
+
 ![image](https://user-images.githubusercontent.com/12052283/83931146-b1e32400-a78a-11ea-954e-048baf270d49.png)
 
 
@@ -431,8 +443,40 @@ __Usando para isso o LOOP__
 
 *Temos sempre 25 linhas e 80 colunas no monitor em assembly.*
 
+*Cada letra que vemos no ecrã é definida por 2 bytes, ou seja,uma __word__.*
+
+*A letra contêm duas coisas, a letra em si que é o byte menos significativo e os atributos(cores) que é o byte mais significativo*
+
+__Explicação da imagem da Memória de Video__
+
+Aqui fazemos a mesma coisa para encontrarmos a posição onde queremos escrever no ecrã.
+
+Como mostra na imagem, quero escrever onde diz "monitor[2][1]" , então multiplico 2*(80*2) + 1 * 2 = 322 .
+
+A conta em cima é, o número da linha * o número total de colunas (80) * 2 (porque são 2 bytes por letra) + 1 (coluna) * 2 (número de bytes).
+
+__Como sabemos que é sempre (80*2), podemos multiplicar o nr da linha * 160 e estamos avançar 1 linha.__
+
+__Para mudar de coluna é avançar 2 bytes__
+
 
 ![image](https://user-images.githubusercontent.com/12052283/83931287-6e3cea00-a78b-11ea-9d5d-fb189769888e.png)
+
+
+__Para a imagem abaixo__
+
+(Da esq para a diret)
+    
+    O primeiro bit diz se pisca ou não
+
+    Os 3 bits seguintes é a cor de fundo
+        Para a cor de fundo só se pode usar a coluna do lado esquerdo
+        Tira-se o bit do lado esquerdo da cor, por exemplo o cinza é 111
+    
+    O resto dos bits é a cor da letra
+        Podemos usar qualquer cor que esteja na imagem
+
+
 
 
 ![image](https://user-images.githubusercontent.com/12052283/83931401-0509a680-a78c-11ea-8cde-74a41acfda10.png)
@@ -442,10 +486,59 @@ __Exemplo de código__
 
 ![image](https://user-images.githubusercontent.com/12052283/83931427-3bdfbc80-a78c-11ea-8815-1debe42ecd31.png)
 
+__Explicação do Código__
+
+Tudo o que escrevermos no registo __"es"__ irá aparecer no ecrã
+
+A letra que será apresentada é o A (mov al,'A')
+
+Pois metemos o __"al"__ no __"es"__ com o deslocamento __"bx"__ (mov es:[bx],al)
+Neste caso nao estamos a fazer contas para sabermos onde vamos meter o A, então como usamos o __"bx"__, vamos colocar em todo o ecrã (mov cx, 80*25).
+
+O __"loop"__ vai executar 80*25 (ou seja, todo o ecrã).
+
+__mov es:[bx], al__ ; letra
+
+__mov es:[bx+1], ah__ ; atributo (cor)
+
+
 
 __Exemplo no DOSBOX__
 
 ![image](https://user-images.githubusercontent.com/12052283/83931583-038cae00-a78d-11ea-9256-1ab81dc25773.png)
+
+
+__Exemplo usando  o Ex14__
+
+
+![image](https://user-images.githubusercontent.com/12052283/84087620-0d572100-a9da-11ea-93de-5f8224bb2bf2.png)
+
+__Resultado no DOSBOX__
+
+
+![image](https://user-images.githubusercontent.com/12052283/84087664-252ea500-a9da-11ea-978c-fded1a7e4eb9.png)
+
+
+__NOTA__
+
+*Na linha 28 do código, se usarmos __add di,160__ o que essa operação faz é, escreve 'Aula de TAC' na vertical, ou seja, vamos saltando linhas em cada iteração*
+
+*Para escrevermos na diagonal, fazemos __add di, 162__ , ou seja, + 160 para mudar de linha + 2 para mudar de coluna.*(na linha 28)
+
+![image](https://user-images.githubusercontent.com/12052283/84087942-c4539c80-a9da-11ea-83e1-e715dfc2b20d.png)
+
+
+__Agora queremos colocar a string numa dada posição__
+
+![image](https://user-images.githubusercontent.com/12052283/84088887-1bf30780-a9dd-11ea-8086-46908606684d.png)
+
+Ao colocar o __"di"__ a 0 , estamos a dizer que começa no canto superior esquerdo
+temos de encontrar a coordenada certa onde queremos escrever e é o que fazemos quando declaramos as variaveis __linha__ e __coluna__ .
+
+__Resultado no DOSBOX__
+
+![image](https://user-images.githubusercontent.com/12052283/84088964-50ff5a00-a9dd-11ea-96c5-51bd4c1830ba.png)
+
 
 
 ## Instruções de movimentação que manipulam dados da pilha
@@ -460,5 +553,41 @@ __NOTA__
 
 *Sempre que se dá PUSH de algo, temos obrigatoriamente de dar POP depois ou o código crasha.*
 
-Podemos usar o push e o pop para guardar registos no inicio e no fim de uma funcao.
+Podemos usar o push e o pop para guardar registos no inicio e no fim de uma função.
 
+__Exemplo__
+
+Sempre que temos 2 ciclos e estamos a usar os mesmos registos em ambos os ciclos, temos de no ciclo exterior, dar __push__ para a __stack__ dos registos.
+
+Assim podemos usar esses mesmos registos no ciclo interior.
+
+No final e fora do ciclo interior, damos __pop__ dos registos pela __ordem contrária__ de quando demos __push__
+
+__Dentro do ciclo exterior e antes do ciclo interior__
+
+    push cx
+    push si
+    push di
+
+__Depois do ciclo interior__
+
+    pop di
+    pop si
+    pop cx
+
+__NOTA__
+
+Só há __push's__ de 16 bits , AX, BX, CX ...
+
+![image](https://user-images.githubusercontent.com/12052283/84093228-27e4c680-a9e9-11ea-9188-1a424a6a34db.png)
+
+
+## Utilização do Byte PTR e Word PTR
+
+Sempre que é preciso copiar um valor para uma zona de memória, por exemplo, __mov es:[di], 123__ , nao podemos fazer desta maneira.
+
+Porque o assembly nao sabe se queremos escrever um byte ou uma word.
+
+Quando nada indica que queremos copiar um byte ou uma word, na instrução, temos de dar uma indicação adicional.
+
+Por exemplo, teria de ficar __mov BYTE PTR es:[di], 124__

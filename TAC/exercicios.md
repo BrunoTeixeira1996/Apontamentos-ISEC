@@ -217,7 +217,56 @@ __Ex 15__
 
 __Enunciado__
 
+![image](https://user-images.githubusercontent.com/12052283/84085622-856f1800-a9d5-11ea-8023-582acc14af09.png)
+
 
 __Resposta__
 
 ![image](https://user-images.githubusercontent.com/12052283/83931012-f5895e00-a789-11ea-8ac8-722d8c90591e.png)
+
+
+__Ex Aula 28-05-2020__
+
+__Enunciado__
+
+![image](https://user-images.githubusercontent.com/12052283/84089735-4ba30f00-a9df-11ea-9d4a-3923188c6535.png)
+
+
+![image](https://user-images.githubusercontent.com/12052283/84089832-85741580-a9df-11ea-9d97-421accd073d4.png)
+
+ 
+__Resposta__
+
+![image](https://user-images.githubusercontent.com/12052283/84092109-fc141180-a9e5-11ea-8652-5a6e91e50426.png)
+
+
+__Ex2 Aula 28-05-2020__
+
+__Enunciado__
+
+![image](https://user-images.githubusercontent.com/12052283/84093981-346a1e80-a9eb-11ea-945d-01f3610b4ab8.png)
+
+![image](https://user-images.githubusercontent.com/12052283/84094018-4ba90c00-a9eb-11ea-845c-efe0c8c808f0.png)
+
+*Aqui vamos ter de usar o __push__ e o __pop__ uma vez que temos 2 ciclos em que em ambos iremos mexer nos valores do __cx__ __si__ e __di__ , logo, no ciclo exterior temos de guardar os seus valores na __Stack__ fazendo:*
+
+    push cx
+    push si
+    push di
+
+*Logo a seguir ao ciclo interior, temos de dar __pop__ pela ordem correta:*
+
+    pop di
+    pop si
+    pop cx
+
+__Resposta__
+
+![image](https://user-images.githubusercontent.com/12052283/84094215-ce31cb80-a9eb-11ea-8ff5-438e33758acf.png)
+
+![image](https://user-images.githubusercontent.com/12052283/84094249-e30e5f00-a9eb-11ea-9927-700c495c977a.png)
+
+
+__Resultado no DOSBOX__
+
+![image](https://user-images.githubusercontent.com/12052283/84094285-ffaa9700-a9eb-11ea-95e1-b452ed4cf202.png)
