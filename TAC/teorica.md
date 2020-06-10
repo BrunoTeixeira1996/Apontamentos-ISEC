@@ -194,7 +194,7 @@ todo o processo do pipeline.
     a arquitetura híbrida que traz um núcleo RISC e um descodificador CISC
 
 
-# Microprocessador (Aula 07/06/2020)
+# Microprocessador (Aula 07/04/2020)
 
 __Microprocessador 80386__
 
