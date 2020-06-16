@@ -12,6 +12,12 @@ __Solução encontrada__
     que já não é utilizado há mais tempo e vai para o HDD (ganhando um espaço
     para receber a nova instrução que está à espera). 
     (desenho 2)
+    
+
+__Nota__
+
+    O conceito swap existe quando estamos a enviar as partes dos programas que estão a ser utilizadas para a memória e outras partes para o HDD
+
 
 A memória virtual tambem pode apontar diretamente para o HDD, por intermédio do __memory map__ . __(desenho 3)__
 
@@ -21,6 +27,13 @@ __Nota__
 
     O Disco é 1000x mais lento que a RAM
     O Endereço virtual têm mais bits que o endereço real
+    Endereços virtuais(lógicos) são gerados pela CPU
+    Endereços fisicos são visiveis pela unidade de memória
+
+__MMU(Memory Management Unit)__
+
+    Periférico de hardware, tem a responsabilidade de traduzir endereços lógicos em endereços físicos.
+
 
 ## Microprocessador 80286
 
@@ -38,9 +51,15 @@ __Modo Protegido__
 
 Apresenta uma pre-tech cache memory : com a tecnologia __SRAM__ armazena os mesmos programas que a __DRAM__, mas 100x mais rápido, então o processador consegue aceder a eles mais facilmente sem ter de ir à __DRAM__.
 
-Assim a __SRAM__ trabalha em conjunto com a __DRAM__ para rapidamente fornecer os dados ao processador.
+Assim a __SRAM__ trabalha em conjunto com a __DRAM__ para rapidamente fornecer os dados ao processador porque guardamos na cache coisas que poderemos precisar em breve.
 
 ![image](https://user-images.githubusercontent.com/12052283/84325386-2abaf500-ab6a-11ea-9b96-76f7247a41c2.png)
+
+## Inclusão
+
+    A cache irá conter instruções, no entanto essas instruções são uma réplica de um pedaço da memória central.
+
+    A própria memoria central é uma réplica da memória virtual.
 
 
 # <span style="background-color: #FFFF00; color: #000"> Pergunta de exame</span>
@@ -50,7 +69,7 @@ __Para que é necessária a cache?__
     Como explicado anteriormente, a cache tem o objetivo de melhorar a velocidade
     de execução do processador e consequentemente da máquina.
 
-    A memória principal é mais lenta que a cache, portante ao existirem alguns
+    A memória principal é mais lenta que a cache, portanto ao existirem alguns
     programas na cache, conseguimos ir lá buscá-los e processá-los muito mais
     rápidamente tendo melhor performance de execução de programas.
 
@@ -62,11 +81,15 @@ __Para que é necessária a cache?__
 
 ## Principio da proximidade
 
+    Exibido pela maior parte dos programas no acesso à memória, que permite acelerar os acessos à mesma com a hierarquia
+
 __Como aceder à memória e a que programas?__
 
     Principio temporal: Ir buscar o que foi acedido há menos tempos.
 
     Principio espacial : Ir buscar o que está mais proximo em termos de endereço.
+
+
 
 ## Mapeamento direto
 
@@ -91,7 +114,7 @@ Para a resolução dos problemas anteriores, a cache ainda é formada pela __Tag
 
 # <span style="background-color: #FFFF00; color: #000"> Exercicio</span>
 
-* __Uma máquina com RAM de 32 bits, uma cache de 64kbytes e com os blocos
+* __Considere uma máquina com um espaço de endereçamento (RAM) de 32 bits, uma cache de 64kbytes e com os blocos
     de 1byte cada__
 
     * Quantos bits são necessários para a TAG?
@@ -109,9 +132,11 @@ Inicialmente o processador tratava de um programa de cada vez e outros tinham de
 
 ## <span style="background-color: green; color: #fff"> Solução (pipeline)</span>
 
-    Fazer uma instrução de um programa e quando esta acabar, fazer a mesma
-    instrução do programa seguinte e ao mesmo tempo o primeiro programa continua
-    a avançar - espécie de produção em série.
+    Fazer uma instrução de um programa e quando essa instrução acabar, fazer a
+    mesma instrução do programa seguinte e ao mesmo tempo o primeiro programa
+    continua para a instrução seguinte, repetindo-se este processo.
+
+    Espécie de produção em série.
 
     Para isto foi necessário mudar a unidade de controlo para começar a gerir
     vários programas ao mesmo tempo.
@@ -131,11 +156,18 @@ __Super-Pipeline__
 
     Tem um desfasamento no inicio do arranque de cada operação.
 
+    Antes de acabar o fetch(ir buscar à memória) da primeira instrução, começa o
+     fetch da segunda instrução e assim sucessivamente.
+
 __Super-Escalaridade__
+
+    Aqui temos 2 ou mais instruções a começar ao mesmo tempo.
+    
+    Isto devido à elevada capacidade do CPU.
 
     Parecido ao anterior mas com mais capacidade de processamento.
 
-Nas super, microprocessador é quem determina quantas e quais instruções se fazem ao mesmo tempo.
+Nas super, o microprocessador é quem determina quantas e quais instruções se fazem ao mesmo tempo.
 
 
 ![image](https://user-images.githubusercontent.com/12052283/84327235-5cce5600-ab6e-11ea-9c42-117c439f6a16.png)
@@ -149,7 +181,7 @@ Nas super, microprocessador é quem determina quantas e quais instruções se fa
 
 ## <span style="background-color: green; color: #fff"> Solução </span>
 
-    Colocar essas instruções que necessitam de outras para último e assim as que
+    Colocar essas instruções, que necessitam de outras, para último e assim as que
     estavam a ficar atrasadas podem ser processadas.
 
     O próprio processador é quem gere isto.
@@ -168,19 +200,31 @@ Nas super, microprocessador é quem determina quantas e quais instruções se fa
 __CISC (Complex Instruction Set Computer) :__
 
     Consegue incorporar vários softwares(principalmente com a ideia dos mais
-    antigos) no mesmo processador. Seria desnecessário utilizadores comprarem novo software.
+    antigos) no mesmo processador.
+    Seria desnecessário os utilizadores comprarem um novo software.
 
     Contudo, os processos ficavam lentos porque a linguagem era muito mais
     pesada e com milhares de instruções.
+
+    Instruções efetuadas sobre a memória, retirando pouco partido da sua
+    localização espacial.
 
 
 __RISC (Complex Instruction Set Computer) :__
 
     Processador extremamente simples, operações feitas mais no processador,
-    não snedo necessário ir tanto à memória.
+    não sendo necessário ir tanto à memória.
 
     Portanto, grande rapidez na execução de tarefas.
 
+    Instruções de formato fixo, cujo o código tem sempre o mesmo tamanho, o que
+    lhe permite a descodificação da instrução e trabalhar em piplining.
+
+__NOTA__
+    
+    Os processadores INTEL ainda usam o CISC
+
+    No entanto o RISC é usado em telemoveis, consolas de jogos ...
 
 O RISC é mais eficiente que o CISC - Pipeline também mais adaptado ao RISC
 
@@ -223,3 +267,53 @@ __Microprocessador 80486__
 * 80486 SX: lowcost (sem o processador matemático)
 
 * 80486 SL: portáteis, de 5v para 3.3v de tensão.
+
+# (Aula 15/04/2020)
+
+__Diferença entre cache de nível 1 e de nível 2__
+
+    A cache de nível 1 está sempre dentro do processador.
+    A cache de nível 2 pode estar dentro do processador.
+
+    A cache de nível 1 é mais rápida que a de nivel 2.
+
+    Pode existir mais um nível de cache ainda.
+    Quanto mais nos afastamos do CPU, a cache é mais lenta, no entanto contém
+    mais capacidade de armazenamento.
+
+    Basicamente o processador começa por procurar o programa na cache 1 e se o
+    encontrar, obtém-no muito rapidamente.
+    A partir do momento que parte para outras caches(ou até mesmo chegar até 
+    RAM ou disco), a rapized diminui.
+
+    Optam por fazer várias caches em vez de uma grande entro do CPU, porque iriam
+    ocupar muito espaço lá dentro.
+
+
+![image](https://user-images.githubusercontent.com/12052283/84779817-5f003c80-afd4-11ea-8922-8f4f62b55f42.png)
+
+
+## Barramentos
+
+__Arquitetura com diferentes níveis de velocidade__
+
+![image](https://user-images.githubusercontent.com/12052283/84780014-9a9b0680-afd4-11ea-8d1b-b97aed965134.png)
+
+
+* 1
+
+    * Devido ao investimento na multimédia(mmx) que exige transferências rápidas
+    de informação.
+
+* 2
+
+    * No início existia um bus que fazia a ligação entre o CPU e os vários
+    elementos. Com a evolução dos diferentes dispositivos, e consequentemente
+    com a discrepância de velocidades entre eles, foi necessário um dispositivo
+    que ajudasse a dividir o bus de dados pelas respetivas velocidades. Entregava
+    assim as velocidades corretas a cada elemento com a ajuda de outros barramentos.
+
+* 3
+
+    * Em conjunto com a northbridge, gere o bus de dados para os dispositivos
+    mais lentos(os que vemos em baixo).
