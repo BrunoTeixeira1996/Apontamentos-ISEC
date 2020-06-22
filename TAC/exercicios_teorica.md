@@ -6,9 +6,5 @@
 
 ## Resposta
 
-    As arquiteturas superescalares fazem um
-    reordenamento de instruções na tentativa
-    de limitar efeitos das dependências, usam
-    execução de instruções especificas para
-    conseguirem ser eficientes e requerem
-    multiplas capacidades da CPU.
+    As arquiteturas superescalares fazem um reordenamento de instruções na tentativa de limitar efeitos das dependências ,usam execução de instruções especificas para conseguirem ser
+     eficientes e requerem multiplas capacidades da CPU.
