@@ -10,6 +10,11 @@ __As arquiteturas superescalares fazem um reordenamento de instruções na tenta
 
 __Usam a execução de instruções para conseguirerem ser eficientes, no entanto requerem alguma capacidade da CPU.__
 
+__Para despachar multiplas instruções por ciclo é necessário
+minimizar as perdas por desvios. Nas arquiteturas superes-
+calares, as perdas por desvios causam sérias consequências
+no desempenho: 25% a 75% das perdas são devido a erros
+de desvios__
 
 ![image](https://user-images.githubusercontent.com/12052283/85332487-9042a600-b4c7-11ea-9053-25147bf1239d.png)
 
@@ -21,19 +26,29 @@ __Caracterizam-se por utilizarem a tecnologia laser(intensos feixes luminosos) p
 
 __A informação é armazenada através de perfurações. Uma posição perfurada equivale ao estado "1" e o contrário é "0".__
 
+__O leitor de CD tem a tarefa de
+encontrar e ler os dados armazenados
+no CD. O drive é constituído por 3
+componentes fundamentais:__
+
+        O motor, para fazer rodar o disco.
+        Um laser e um sistema de lentes.
+        Um mecanismo de posicionamento
+
 
 ## b)
 
 __As pistas de um CD não são concêntricas, mas sim em espiral.__
 
-
-## c)
-
-__Os dados circulam do interior da espiral para o seu exterior.__
-
 __Cada bloco tem 2352 bytes.__
 
 __Destes, 2048 ou 2336 (dependendo do modo) são destinados a dados do utilizador, os restantes servem para posicionamento, detecção e correcção de erros e informação sobre velocidade.__
+
+## c)
+
+__O mecanismo de "tracking" tem por objetivo manter o laser de leitura sobre a pista de dados. Esta é uma ação fundamental dado que a pista em espiral está em continuo movimento e a cabeça da leitura tem que acompanhar esse movimento para nao perder o fluxo de dados de leitura.__
+
+__Os dados circulam do interior da espiral para o seu exterior.__
 
 __Esta disposição apresenta vantagens no que respeita à produção de meios contínuos.__
 
@@ -46,7 +61,7 @@ __Esta disposição apresenta vantagens no que respeita à produção de meios c
 
 __O modo real reproduz o esquema de operações do 8086, herdou todas as suas limitações (inclusive a barreira de 1Mb de memória).__
 
-__O modo protegido tira maior partido da memória disponível embora não seja compativel com os programas para o 8086 (proteção de memória ao nível do hardware).__
+__O modo protegido tira maior partido da memória disponível embora não seja compativel com os programas para o 8086, o modo protegido permitia o uso de todos os 16MB de memória real, além de 1GB de memória virtual(Proteção de memória ao nível do hardware).__
 
 
 # Época normal (25-06-2019)
@@ -58,7 +73,8 @@ __O modo protegido tira maior partido da memória disponível embora não seja c
 
 __A secção de aquisição e descodificação é onde são recebidas as instruções provindas da memória para serem descodificadas de modo a que a CPU possa determinar quais as operações deve realizar.__
 
-__A unidade de controlo gera os sinais que permitem fazer as operações e guardar resultados. Extrai da memória, uma a uma as sucessivas instruções do programa, anexa essas instruções e gera sinais de comando que são enviados aos diversos componentes e permitem executar cada instrução analizada.__
+__A unidade de controlo controla ou determina as operações a efectuar em cada instante, enviando sinais apropriados aos outros componentes.
+Extrai da memória, uma a uma as sucessivas instruções do programa, anexa essas instruções e gera sinais de comando que são enviados aos diversos componentes e permitem executar cada instrução analizada.__
 
 __A unidade de aritmética lógica é resposável pela execução de operações aritméticas e lógicas.__
 
@@ -67,11 +83,12 @@ __A unidade de aritmética lógica é resposável pela execução de operações
 
 ## Resposta
 
-__Para gravar dados, é necessário apagar já existentes. A regravação só pode ser feita um nº finito de vezes. Para escrever na célula é criado um campo elétrico de forma a obter eletrões livres.__
+__Para gravar dados, é necessário apagar já existentes. A regravação só pode ser feita um nº finito de vezes. Para escrever na célula é criado um campo elétrico de forma a obter eletrões livres entre a n-source e o n-drain.__
 
 __A célula é composta por transístores com uma fina camada de óxido de sílicio, pode armazenar cargas negativas.__
 
 __Isso cria uma espécie de armadilha de eletrões que permite manter os dados por longos periodos de tempo.__
+
 
 # Época Recurso (18-07-2018)
 
@@ -84,6 +101,14 @@ __A memória virtual é uma técnologia que permite a execução de processos em
 
 __Esta consiste em usar duas noções de endereço, o endereço virtual (no contexto do espaço de endereçamento do processo que pode exceder o tamanho físico da memória) e o endereço real(no contexto de execução, apenas uma parte do espaço de endereçamento do processo é carregada na memória, situação virtual irá corresponder a um determinado endereço físico).__
 
+__Como principal vantagem da memória virtual saliente-se o permitir um
+uso mais eficiente da memória física.__
+
+__A paginação de memória (páginas de memória) é um método de organizar a memória e que se adequa bem à implementação da memória virtual.__
+
+__O espaço de endereçamento de um processo pode não ser contíguo (é um conjunto de
+páginas). para executar um programa com tamanho de n páginas, é necessário
+procurar n molduras livres e carregá-lo para essas molduras.__
 
 # Época Recurso (18-07-2014)
 
@@ -91,11 +116,17 @@ __Esta consiste em usar duas noções de endereço, o endereço virtual (no cont
 
 ## Resposta
 
-__A memória ROM é apenas de leitura e não é volátil. A informação existente na memória é definida aquando do fabrico, pelo que é utilizada apenas em situações para que foi construida.__
+__A memória ROM(Read Only Memory) é usada para armazenar instruções e/ou dados permanentes. A
+informação geralmente é colocada no chip de armazenamento
+quando ele é fabricado e o conteúdo da ROM.__
 
 __A memória PROM pode ser programável, permite a escrita de informação através de dispositivos apropriados(dados gravados não são apagados) e comporta-se como a ROM.__
 
+__A memória EPROM é uma memória de leitura, pode ser programável através de equipamente adequado.Pode ser apagada através de raios ultravioleta.__
+
 __A memória EEPROM é uma memória de leitura e pode ser programável.A memória pode ser apagada eletronicamente (emite-se uma descarga de energia por uma das portas do circuito que apaga a informação).Comporta-se como a PROM.__
+
+__Fisicamente a EEPROM distingue-se da anterior pela ausencia da "janela" onde se pode emitir o tal feixe de luz."__
 
 
 ![image](https://user-images.githubusercontent.com/12052283/85336927-0c8cb780-b4cf-11ea-8249-9235dcce8481.png)
@@ -173,6 +204,7 @@ __A tecnologia Hyper-Threading possibilita um único processador executar dois p
 
 __Os processadores lógicos de um processador com tecnologia HT partilham os recursos de execução do processador que inclui o motor de execução, as caches, o bus e o firmware.__
 
+__Essa tecnologia faz com que cada núcleo do processador possa executar mais de um thread de uma única vez, tornando o sistema mais rápido quando se usam vários programas ao mesmo tempo.__
 
 ![image](https://user-images.githubusercontent.com/12052283/85340638-f9311a80-b4d5-11ea-8ff3-f661f43ae5d3.png)
 
@@ -184,7 +216,7 @@ __Os processadores lógicos de um processador com tecnologia HT partilham os rec
 
 ## b)
 
-__A tag é usado para armazenar endereços. Quando um endereço armazenado corresponde a um endereço de entrada, é emitido um sinal para executar uma função. É usado na cache do CPU, para controlar quais endereços de memória estão armazenados na cache.__
+__A tag é usada para armazenar endereços. Quando um endereço armazenado corresponde a um endereço de entrada, é emitido um sinal para executar uma função. É usado na cache do CPU, para controlar quais endereços de memória estão armazenados na cache.__
 
 ## c)
 
@@ -206,3 +238,94 @@ __A unidade de controlo controla ou determina as operações a efetuar em cada i
 __A unidade aritmética e lógica é responsável pela execução de operações e os registos são usados para armazenar resultados temporários e certas informações de controlo.__
 
 __O barramento é um conjunto de linhas de comunicação que permitem a interligação entre dispositivos. Esta zona é conhecida por "DataPath".__
+
+# Época Recurso (13/07/2013)
+
+![image](https://user-images.githubusercontent.com/12052283/85601608-108b1780-b63e-11ea-910f-27d2d1fc7c3c.png)
+
+
+## Resposta
+
+## a)
+
+![image](https://user-images.githubusercontent.com/12052283/85602707-28af6680-b63f-11ea-8554-d98de9cbdb46.png)
+
+## b)
+
+![image](https://user-images.githubusercontent.com/12052283/85606755-00296b80-b643-11ea-9e3f-532d870b4756.png)
+
+
+![image](https://user-images.githubusercontent.com/12052283/85606881-1c2d0d00-b643-11ea-88b2-ef75cc559bd0.png)
+
+
+__A gravação longitudinal trata-se de uma técnica antiga, mas que só começou a perder espaço com a popularização dos atuais discos rígidos SATA.__
+
+__Ao passar por uma área já gravada para realizar a leitura de dados, a cabeça utiliza indução elétrica ou resistência para capturar o campo magnético existente ali, permitindo a obtenção dos dados.__
+
+__Com a gravação longitudinal chegando ao seu limite, a indústria teve que procurar uma alternativa. É aí que entra em cena a gravação perpendicular, bastante utilizada nos dias de hoje.__
+
+__Nesta técnica, as partículas são alinhadas de maneira perpendicular, ou seja, na vertical, como se as partículas ficassem em "pé" em vez de "deitadas". Uma camada extra existente logo abaixo ajuda a tornar o processo ainda mais efetivo.__
+
+__A gravação perpendicular consegue não só aumentar expressivamente a capacidade de armazenamento, como protege o disco do mencionado risco de desmagnetização. Além disso, o alinhamento vertical torna a camada mais espessa, gerando campos mais fortes e, assim, facilitando o trabalho da cabeça de leitura e gravação.__
+
+# Época Normal (02/07/2013)
+
+![image](https://user-images.githubusercontent.com/12052283/85608935-189a8580-b645-11ea-980f-8fc6aff08602.png)
+
+## Resposta
+
+## a)
+
+__Para gravar dados na célula, é necessário primeiro
+apagar os já existentes. Isso é feito aplicando-se uma
+corrente eléctrica que flui do “emissor” para o Control
+Gate, essa corrente “limpa” o Floating Gate,
+eliminando qualquer carga elétrica armazenada.
+A regravação só pode ser feita um número finito de
+vezes, de 10 a 100 mil vezes. Daí o mito de que os SSDs
+têm uma vida útil curta. No entanto pode levar algum
+tempo a alcançar o limite.__
+
+## b)
+
+__Existem dois tipos de memória Flash:__
+
+__Flash NOR__
+
+    lançada em 1988 tem um sistema de endereçamento
+    muito semelhante à das tradicionais memórias RAM, que
+    permite correr programas directamente adaptando-se para
+    substituir as memórias ROM, até então usadas para gravar o
+    BIOS.
+
+__Flash NAND__
+
+    usadas actualmente, são muito mais baratas que as
+    NOR e muito mais rápidas a gravar dados. Usam um sistema de
+    endereçamento de páginas de 4 KB que são acedidas de forma
+    sequencial, da mesma forma que é feito em um HDD, não
+    sendo possivel correr programas a partir de si mesmas.
+
+![image](https://user-images.githubusercontent.com/12052283/85609386-8941a200-b645-11ea-8cf7-c0074a5c655f.png)
+
+
+## c)
+
+__Originalmente, os chips de memória utilizavam apenas
+uma tecnologia chamada SLC (Single-Level Cell).__
+
+__Recentemente foi criada a tecnologia MLC (Multi-
+Level Cell), onde cada célula de memória armazena
+dois ou três bits, ao invés de apenas um. Isso é
+conseguido com a utilização de tensões diferentes,
+em vez de apenas duas.__
+
+__A variante MLC (Multi Level Cell) permite vários níveis
+por célula mas está más sujeita a erros.__
+
+
+![image](https://user-images.githubusercontent.com/12052283/85609594-c27a1200-b645-11ea-9ef3-9a17c8e59e0b.png)
+
+## Resposta
+
+![image](https://user-images.githubusercontent.com/12052283/85613248-3538bc80-b649-11ea-994a-b88971bcac16.png)
