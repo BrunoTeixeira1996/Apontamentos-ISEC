@@ -123,7 +123,12 @@ Para a resolução dos problemas anteriores, a cache ainda é formada pela __Tag
 
 ![image](https://user-images.githubusercontent.com/12052283/84326693-16c4c280-ab6d-11ea-89e2-812668320829.png)
 
-![image](https://user-images.githubusercontent.com/12052283/84326769-4247ad00-ab6d-11ea-8c43-ce9272602be4.png)
+![image](https://user-images.githubusercontent.com/12052283/85707727-fd765700-b6d2-11ea-94b1-2686e06bfb49.png)
+
+
+## Caso nos pedissem para calcular o espaço de endereçamento da RAM 
+
+![image](https://user-images.githubusercontent.com/12052283/85708073-547c2c00-b6d3-11ea-8ed6-b313c6598b4e.png)
 
 
 # Tecnologia Superescalar (Aula 01/04/2020)

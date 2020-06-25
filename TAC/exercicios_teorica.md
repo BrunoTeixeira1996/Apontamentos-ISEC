@@ -251,8 +251,7 @@ __O barramento é um conjunto de linhas de comunicação que permitem a interlig
 ![image](https://user-images.githubusercontent.com/12052283/85602707-28af6680-b63f-11ea-8554-d98de9cbdb46.png)
 
 ## b)
-
-![image](https://user-images.githubusercontent.com/12052283/85606755-00296b80-b643-11ea-9e3f-532d870b4756.png)
+![image](https://user-images.githubusercontent.com/12052283/85710414-c2c1ee00-b6d5-11ea-8546-dbb51b0428ec.png)
 
 
 ![image](https://user-images.githubusercontent.com/12052283/85606881-1c2d0d00-b643-11ea-88b2-ef75cc559bd0.png)
@@ -329,3 +328,82 @@ por célula mas está más sujeita a erros.__
 ## Resposta
 
 ![image](https://user-images.githubusercontent.com/12052283/85613248-3538bc80-b649-11ea-994a-b88971bcac16.png)
+
+
+# Época especial (14/09/2017)
+
+![image](https://user-images.githubusercontent.com/12052283/85628061-07f70900-b65f-11ea-9359-bc59efccd41f.png)
+
+## Resposta
+
+__Refrescar a memória é o processo de leitura periodicamente as informações de uma área de memória do computador e imediatamente reescrever as informações de leitura para a mesma área, sem modificação, com a finalidade de preservar a informação. Refrescar a memória é um processo de manutenção fundo necessário durante a operação de semicondutores memória dinâmica de acesso aleatório (DRAM), o tipo mais utilizado de memória do computador, e de fato é a característica definidora dessa classe de memória.__
+
+# Época normal (17/06/2015)
+
+![image](https://user-images.githubusercontent.com/12052283/85628517-cb77dd00-b65f-11ea-8ec7-0b6a1dffe00c.png)
+
+
+## Resposta
+
+## a)
+
+![image](https://user-images.githubusercontent.com/12052283/85629095-c10a1300-b660-11ea-8ab7-a2f8c2ae4514.png)
+
+## b)
+![image](https://user-images.githubusercontent.com/12052283/85710811-2d732980-b6d6-11ea-91b0-a9ec3b1c3999.png)
+
+
+
+![image](https://user-images.githubusercontent.com/12052283/85629830-109d0e80-b662-11ea-9e48-93cbf516f57d.png)
+
+## Resposta
+
+![image](https://user-images.githubusercontent.com/12052283/85630235-d54f0f80-b662-11ea-9231-05d4c1574a7e.png)
+
+__Ou seja, com a imagem em cima podemos ver que o pipelining é adequado ao RISC uma vez que usa uma tecnologia mais rápida e melhor.__
+
+# Época normal (23/06/2017)
+
+![image](https://user-images.githubusercontent.com/12052283/85631139-7f7b6700-b664-11ea-8cec-b8b64bdcdc7d.png)
+
+## Resposta
+
+__Endereços lógicos(ou virtuais) são gerados pela CPU.
+Um endereço virtual é composto por dois campos:__
+
+    Número de página (p) – usado como um índice para a tabela de páginas que contém os
+    endereços base de cada página em memória.
+
+    Deslocamento (d) – é combinado com o endereço-base para definir o endereço físico
+    para ser enviado à unidade de memória.
+
+__Endereços físicos são visiveis pela unidade de memória.__
+
+__Os endereços lógicos e físicos coincidem em tempo de compilação, mas diferem em tempo
+de execução (recolocação).__
+
+__A MMU (Memory Management Unit), periférico de hardware, tem a responsabilidade de
+traduzir endereços lógicos em endereços físicos.__
+
+# Época normal (27/06/2018)
+
+
+
+![image](https://user-images.githubusercontent.com/12052283/85727354-759a4800-b6e6-11ea-98db-9723681a6545.png)
+
+
+## Resposta
+
+## a)
+
+__A tag tem por função identificar os bits mais significativos do endereço de memória RAM ao qual corresponde uma deerminada célula da CACHE.__
+
+## b)
+
+__Cada célula da memória cache tem um valid bit que permite identificar se esse valor é válido.__
+
+## c)
+
+![image](https://user-images.githubusercontent.com/12052283/85730882-8b5d3c80-b6e9-11ea-830f-37e3808cdf10.png)
+
+
