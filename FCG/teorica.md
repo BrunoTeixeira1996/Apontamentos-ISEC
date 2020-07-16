@@ -39,7 +39,7 @@ __Solução__
 
 __A Distância focal e a Abertura da lente são parâmetros da camara pinhole__
 
-## Distância Focal
+# Distância Focal
 
 É a distância entre o nosso plano de imagem e a abertura.
 
@@ -75,7 +75,7 @@ __Solução__
 
 ![image](https://user-images.githubusercontent.com/12052283/87694426-b9c8b780-c77d-11ea-83e5-1f64b89c249b.png)
 
-## Lentes
+# Lentes
 
 A forma ou curvatura da lente determina com que precisão os raios de luz são curvados.
 
@@ -217,3 +217,173 @@ A distância ao plano de focagem é a distância da lente ao elemento focado.
 ### NOTA sobre profundidade de campo
 
 ![image](https://user-images.githubusercontent.com/12052283/87702335-cbfc2300-c788-11ea-8672-bed9574a70d2.png)
+
+# Cor
+
+## Perceção da cor
+
+A __luminosidade__ é a intensidade da luz refletida pela superficie dos objetos, enquanto que, para marcar a diferença, o __brilho__ é a quantidade de luz emitida pelas superficies de objetos luminosos como o Sol ou uma lâmpada.
+
+## Modelo de cor de Munsel
+
+Este modelo estabelece padrões de cor que são empregues na determinação dos parâmetros das cores que o modelo define por comparação entre amostras das cores a determinar com os padrões.
+
+### Parâmetros do Modelo de Munsel
+* Cor (Hue)
+* Valor (Luminosidade)
+* Croma (Saturação)
+
+## Cores visiveis e cores espectrais
+
+    Cores espectrais são cores a que correspondem comprimento
+    de onda bem determinados do Espetro Visivel.
+
+    A observação de um Espectro Visivel mostra que nele não se
+    encontram todas as cores Visiveis.
+
+    As cores não espectrais são devidas à mistura de luzes com
+    diferentes comprimentos ou gamas de comprimentos de onda.
+
+## Teoria dos 3 estrímulos
+
+Qualquer cor(comprimento de onda) do espetro vísivel pode ser reproduzida através da adição dos resultados obtidos pelos estímulos dos três tipos de cones de forma diferente.
+
+Esta teoria parece indicar que bastará emitir 3 cores primárias que sejam detetáveis pelos três tipos de cones da retina para que se possam reproduzir todas as cores visiveis, variando simplesmente a proporção das quantidades de luz emitida por cada uma das fontes primárias.
+
+## Modelo CIE XYZ
+
+__Y__ -> Denominado Luminosidade, está associado ao brilho. (Refletância do objeto).
+
+__X__ e __Z__ -> Associados a informações de cromaticidade(tom e saturação).
+
+__O diagrama de cromaticidade apresenta algumas propriedades importantes.__
+
+![image](https://user-images.githubusercontent.com/12052283/87705723-dec52680-c78d-11ea-95b1-033199768735.png)
+
+
+    Um segmento de reta que una os pontos representativos de
+    duas cores, representa todas as cores possiveis de obter
+    pela mistura dessas duas cores.
+
+    Quando essas duas cores forem o iluminante branco
+    de referência e uma cor pura, o quociente entre a
+    distância da cor resultante à cor pura e a distância
+    da cor pura ao iluminante de referência
+    corresponde à saturação da cor.
+
+    O comprimento de onda dominante desta cor é o comprimento
+    de onda característico da cor pura.
+
+As cores obtidas por decomposição da luz solar ou artificialmente mediante focos emissoeres de luz de uma longitude de onda determinada, denominam se de __cores aditivas__.
+
+## Modelo Aditivo
+
+### Modelo RGB
+
+    É o sistema de cores, utilizado nos monitores de computadores
+    e outros sistemas digitais.
+
+    Para representar uma cor no sistema RGB atribui-se um valor
+    entre 0 e 255 (notação decimal) ou entre 00 e FF
+    (notação hexadecimal) para cada um
+    dos componentes vermelho, verde e azul
+    que o formam.
+
+
+![image](https://user-images.githubusercontent.com/12052283/87706823-ab839700-c78f-11ea-811e-f674358f8778.png)
+
+
+## Modelo Subtrativo
+
+### Modelo CMY
+
+    Baseia-se na subtração da luz.
+
+    As cores cião, magenta e amarelo são designadas cores
+    primárias subtrativas.
+    O seu efeito consiste em subtrair ou absorver alguma cor
+    da luz branca.
+
+    A partir destas três cores podemos obter quase todas as
+    demais, salvo o branco e o negro.
+
+
+![image](https://user-images.githubusercontent.com/12052283/87707130-23ea5800-c790-11ea-8b9f-326ac34e6765.png)
+
+
+### Modelo CMYK
+
+    Efetivamente, o conjunto de pigmentos ciano, magenta e
+    amarelo não produz a cor branca, e sim uma cor cinza sujo
+    , neutro.
+
+    Quanto ao negro, também não é possível obtê-lo a partir
+    dos primários, sendo necessário incluí-lo no conjunto de
+    cores bárias subtrativas, obtendo-se o modelo CMYK.
+
+
+### Modelo HSV
+
+    Baseia-se na perceção humana da cor do ponto de vista
+    dos artistas plásticos.
+
+    Os artistas plásticos para obterem as várias cores
+    das suas pinturas, combinam a tonalidade com elementos
+    de brilho e saturação.
+
+
+__HSV (Hue,Saturation,Value)__
+
+__Value__
+* Topo (V = 1)
+* Cores mais brilhantes
+
+__Hue(Ângulo em torno do eixo vertical)__
+* 0º = vermelho
+* 180º = verde
+* Duas cores que façam 180º são complementares
+
+__Saturação__
+* Centro = 0
+* Periferia = 1
+
+![image](https://user-images.githubusercontent.com/12052283/87707753-2c8f5e00-c791-11ea-874b-afa3ff573d4c.png)
+
+
+__As cores primárias ocupam no espaço HSV os vertices do hexágono e encontram-se dispostas segundo um ângulo correspondente de acordo com a tabela em baixo.__
+
+![image](https://user-images.githubusercontent.com/12052283/87707851-4df04a00-c791-11ea-8042-56f2fd253337.png)
+
+__Uma saturação de 1 significa que a cor é pura(está na periferia), enquanto que uma saturação de 0 significa que a cor é totalmente branca e o valor de H é irrelevante.__
+
+__O parâmetro V corresponde à intensidade da cor e vai entr 0 (preto) e 1 (intensidade máxima).__
+
+__Normalmente os tons cinzentos encontram-se localizados sobre o eixo da pirâmide em que S = 0, sendo H indiferente.__
+
+
+### Modelo HLS
+
+    A siga deste modelo é Hue, Lightness, Saturation.
+
+    A representação tridimensional do espaço de cor deste modelo
+    é constituida por 2 cones unidos pelas bases.
+
+    As cores primárias estão situadas no perimetro da base
+    comum e as cores brancas e negra no vertice de cada um
+    dos cones.
+
+    Os tons de cinzento localizam-se sobre o eixo comum dos 2
+    cones.
+
+![image](https://user-images.githubusercontent.com/12052283/87708311-0ae2a680-c792-11ea-9379-e491b20a5057.png)
+
+__H corresponde novamente ao ângulo em que a cor se encontra, tomando a cor vermelha como origem.__
+
+__O parâmetro S têm o mesmo significado que no HSV.__
+
+__As cores puras têm uma saturação de 1, enquanto que as cores com saturação de 0 correspondem a cores brancas de intensidade variavel(cinzenetos) para as quais o parâmetro H não tem qualquer significado.__
+
+__O parâmetro L pode variar entre 0, que corresponde a luminosidade nula, e 1 que equivale a luminosidade máxima que só é possível para a cor branca.__
+
+__Note-se que as cores puras apresentam uma luminosidade de 0,5.__
+
