@@ -387,3 +387,125 @@ __O parâmetro L pode variar entre 0, que corresponde a luminosidade nula, e 1 q
 
 __Note-se que as cores puras apresentam uma luminosidade de 0,5.__
 
+# Iluminação
+
+## Fontes de Luz
+
+Uma fonte de luz pode ser condizerada como uma superficie, em que cada ponto emite luz caracterizada pela direção da emissão e pela intensidade em cada frequência.
+
+### Luz Pontual
+
+    É uma luz que têm uma posição e emite luz em todas as direções.
+
+### Luz Direcional
+    
+    É uma luz em que os raios de luz são todos paralelos entre si.
+    Ou seja, seguem todos a mesma direção.
+
+### Luz Ambiente
+
+    Refere-se a um tipo de iluminação que não vem diretamente
+    de uma fonte de luz, consistindo numa luz que foi refletida
+    várias vezes que já não se considera que venha de de
+    nenhuma direção especifica.
+
+    A luz ambiente é o motivo pelo qual as sombras não são
+    absolutamente negras.
+
+__Caracteristinas da luz ambiente__
+* Sem posição nem direção definidas
+* Intensidade constante
+* Sem atenuação
+
+### Fonte de luz direcional
+
+    Fonte de luz sem localização precisa(ou no infinito).
+
+    Sem atenuação da intensidade luminosa com a distância.
+
+    Os raios luminosos são paralelos, possuindo uma direção
+    precisa.
+
+
+### Fonte de luz pontual
+
+    Localizada numa posição do espaço.
+
+    Emite luz igual em todas as direções.
+
+    Consoante a distância, a intensidade luminosa vai
+    diminuindo.
+
+
+### Spotlight
+
+    Semelhante à luz pontual, em que a emissão de luz se
+    encontra limitada a um ângulo sólido de abertura variada,
+    cujo eixo é a direção de emissão.
+
+__Diferença entre Spotlight e Luz Pontual__
+
+Enquanto que a Luz Pontual emite igualmente em todas as direções, a Spotlight emite preferencialmente numa direção e têm um ângulo sólido de abertura que pode variar.
+
+## Reflexão Especular 
+
+    Na reflexão especular perfeita ("espelhada"), um raio de luz
+    que entra é refletido intacto na superfície.
+
+![image](https://user-images.githubusercontent.com/12052283/87724791-9157b200-c7ab-11ea-90a0-271c0a03e60e.png)
+
+## Reflexão Difusa
+
+    Na reflexão difusa, um raio de luz que chega é espelhado
+    em todas as direções igualmente.
+
+![image](https://user-images.githubusercontent.com/12052283/87725272-80f40700-c7ac-11ea-8d6b-6282c0690231.png)
+
+## Reflexão Especular - Difusa
+
+Quando temos uma reflexão especular e difusa simultâneamente no mesmo objeto/material, podemos cor diferentes para a componente especular e para a componente difusa.
+
+    A cor difusa é a cor básica do objeto.
+
+    A cor especular determina a cor dos realces especulares.
+
+## Modelo de Iluminação de PHONG
+
+    O modelo de iluminação de Phong considera que os materiais,
+    quanto ao modo como refletem a energia luminosa, são uma
+    combinação linear de um material que reflete toda a energia
+    numa única direção, reflexão especular e de um material que
+    reflete toda a energia luminosa de igual modo em todas as
+    direções, reflexão difusa.
+
+    O modelo considera ainda a existência de uma componente de
+    luz Ambiente a qual simula a existência de iluminação
+    global, isto é, de energia luminosa que é refletida por
+    todas as restantes superfícies presentes numa cena e que
+    ilumina a superfície.
+
+__Tem 3 parâmetros__
+
+* Difuso: iluminação e sombras não brilhantes
+* Especular: Reflexos brilhantes
+* Ambiente: Iluminação de fundo
+
+![image](https://user-images.githubusercontent.com/12052283/87725947-b64d2480-c7ad-11ea-94d9-a5c9b4e5488b.png)
+
+
+## Expressão global do modelo de iluminação local de phong
+
+![image](https://user-images.githubusercontent.com/12052283/87727170-f9a89280-c7af-11ea-9c83-66c276d670b9.png)
+
+O modelo de Phong ...
+
+Garante compromisso equilibrado entre
+* Grau de realismo
+* Carga computacional
+
+Modela a intensidade luminosa
+* Combinação linear de 3 componentes
+    * Reflexão ambiente
+    * Reflexão difusa
+    * Reflexão especular
+
