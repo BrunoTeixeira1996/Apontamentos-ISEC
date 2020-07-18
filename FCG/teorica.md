@@ -779,3 +779,126 @@ __Objetivos__
 * Fazer as cenas trabalhar em conjunto
 * Tornar os personagens interessantes
 
+
+# Texturas
+
+## Mapeamento de texturas
+
+    O termo textura refere-se a padrões de imagem e não à
+    "sensação" de materiais.
+
+## Tipos de texturas
+
+__Texturas de bitmap__
+* Representação de imagens em bitmap
+* Representado por uma matriz
+* Tem tamanho definido, nao são infinitas
+
+__Texturas procedimentais__
+* Definido por uma função matemática
+* Não ha tamanho definido, sao infinitas
+
+    * Adequada para texturas aleatórias
+    * Utiliza alguma função de ruído
+
+### Espaço UV
+
+__U__ -> Representa o componente horizontal de uma imagem (eixo X)
+
+__V__ -> Representa o componente vertical de uma imagem (eixo Y)
+
+__W__ -> Representa o eixo Z
+
+## Mapeamento de Texturas
+
+### Bump Mapping(Mapeamento de relevo)
+
+    O mapeamento de texturas deixa as superficeis com uma
+    aparência plana
+
+    A adição de detalhes extras na malha pode ser
+    computacionalmente muito caro
+
+* Usar o mapa de textura para perturbar a superficie normal
+* Usar a matriz de textura para definir uma função que altera a normal da superficie
+* Aplicar o modelo de iluminação usando a normal alterada
+* Usa uma textura para alterar a normal para poder alterar a iluminação
+* Aplicado durante a rasterização
+
+![image](https://user-images.githubusercontent.com/12052283/87858926-04366980-c921-11ea-8346-0cba7d9e9958.png)
+
+
+### Displacement mapping (Mapeamento de deslocamento)
+
+    O mapeamento de relevo altera apenas o sombreamento da
+    superficie, não a geometria real
+
+    O mapeamento de deslocamento altera a superficie usando a
+    textura como uma malha definida em coordenadas uv
+
+![image](https://user-images.githubusercontent.com/12052283/87859073-1b298b80-c922-11ea-814c-078f893df152.png)
+
+* Subdividir a superfície para o nível da resolução de textura
+* Desloca os vértices segundo a direçãonormal da superfície de acordo com a altura no mapa de deslocamento
+
+__O Displacement mexe na geometria, o Bump não mexe na geometria, mexe só na iluminação.__
+
+# Aliasing e Anti-aliasing
+
+__NOTA__
+__Uma das maneiras de combater o Aliasing é adicionar ruido__
+
+
+## Aliasing
+
+    A discretização de uma grandeza contínua implica perda de
+    informação.
+
+    A partir de uma certa perda, os valores discretos medidos
+    são insuficientes para reconstruir a grandeza original.
+     
+     Quando tal sucede, a reconstrução produz
+    informação que pouco ou nada reproduz a informação original.
+
+### Como surge o Aliasing?
+
+__Quando a frequência de amostragem é demasiado baixa para representar o sinal.__
+
+## Antialiasing de texturas
+
+    Quando as texturas são ampliadas, os pixeis individuais
+    da textura(texels) são claramente visiveis
+
+    Com o zoom reduzido, vários texels podem ser
+    mapeados para um único pixel
+
+## Interpolação Bilinear
+
+    Calculando a média dos texels vizinhos com base nas
+    coordeandas uv e usá-la para o pixel atual
+
+## Mip Mapping
+
+    As texturas são produzidas em várias resoluções
+
+    As resoluções são alteradas dependendo do nr de texels
+    por pixel
+
+    É selecionada uma resolução onde a relação de texels para
+    pixel é de 1:1
+
+__Os mipmaps são versões menores e pré-filtradas de uma imagem de textura, representando diferentes níveis de detalhe da texutra.__
+
+### Vantagens do Mip Mapping
+
+* Melhor qualidade de imagem
+    * O uso do mipmapping pode ajudar a eliminar os efeitos de aliasing causados por texturas de superamostragem
+
+* Melhor desempenho
+    * O mipmapping aumenta a eficiência da cache pois as texturas em tamanho normal não são necessárias com tanta frequência e os mipmaps de menor resolução cabem facilmente na cache de textura
+
+### Desvantagem do Mip Mapping
+
+* Aumento no tamanho do arquivo de texturas, pois a cadeia mipmap completa deve ser armazenada juntamente com a textura de resolução total.
+
+* Isso aumenta o tamanho do arquivo em 33%
