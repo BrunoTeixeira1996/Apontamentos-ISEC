@@ -509,3 +509,138 @@ Modela a intensidade luminosa
     * Reflexão difusa
     * Reflexão especular
 
+# Métodos de sombreamento
+
+Para aplicar um modelo de iluminação é necessário calcular a normal a cada faceta.
+
+Como se vai utilizar o modelo de iluminação de Phong, a normal é a única entidade que representa a geometria da faceta pelo que terá sempre que ser calculada.
+
+## Sobreamento constante
+
+__Para cada polígono__
+* Determina um único valor de intensidade
+* Usa esse valor para sombrear todo o polígono
+
+__Premissas__
+* Fonte de luz no infinito
+* Observador está posicionado no infinito
+* O poligono representa a superficie real que está a ser modelada
+
+
+    No modelo do sombreamento constante é utilizada a normal à
+    faceta para calcular uma cor, a qual é usada para sombrear
+    todo a faceta.
+
+    Sabendo a posição da fonte de luz, a normal à faceta e as
+    propriedades do material, é possivel aplicar o modelo de
+    reflexão de Phong e obter uma intensidade da energia
+    luminosa refletida.
+
+
+__Resultado do Sombreamento Constante__
+
+    Os resultados são de baixa qualidade uma vez que ficam
+    visiveis as diferenças de cor nas fronteiras entre
+    facetas.
+
+__Problemas no Sombreamento Constante__
+
+    Nas arestas comuns visualizam-se as intensidades mais
+    baixas como sendo ainda menores e a intensidade mais
+    elevada como ainda sendo maior.
+
+    Este efeito visivel nas arestas designa-se por efeito de
+    bandas de Mach.
+
+## Smooth Shading
+
+__Introduzir valores das normais em cada vértice__
+* Geralmente diferente da normal da faceta
+* Usado apenas para sombreamento
+* Pensado como uma melhor aproximação da superficie real
+
+__Sombreamento usando Aproximações Interpoladas__
+* Sombreamento de Gouraud
+* Sombreamento de Phong(diferente do modelo de ilumi. de Phong)
+
+
+## Sombreamento de Gouraud
+### Calculo da Normal
+
+Para o caso apresentado em que o vértice A é partilhado por 4 facetas, o cálculo da normal nesse vértice obtem-se a partir de:
+
+![image](https://user-images.githubusercontent.com/12052283/87851297-f8c64c80-c8e6-11ea-9796-a7422cbac2cf.png)
+
+![image](https://user-images.githubusercontent.com/12052283/87851305-0976c280-c8e7-11ea-8332-6da615522491.png)
+
+
+## Sombreamento de Phong
+
+No método de sombreamento de Phong, a partir das normais aos vértices, que são calculadas do mesmo modo que no sombreamento de Gourad, é calculada a normal a cada quadrícula através da interpolação das normais.
+
+A normal calculada para cada quadrícula é então usada com o modelo de iluminação de Phong para calcular a intensidade da energia luminosa refletida.
+
+## Exemplo de Sombreamento de Phong e Gouraud
+
+__Sendo A onde está situado o observador e a fonte de luz.__
+
+    A iluminação dos pontos 2 e 3 pelos sombreamentos de Phong e
+    Gouraud é a mesma, porque são 2 vértices.
+
+    No entanto, porque o ângulo entre a direção da reflexão
+    especular perfeita e a direção do observador é agora muito
+    maior, a iluminação em 2 e 3 é menos intensa.
+
+    Consequentemente, a interpolação de intensidades do
+    sombreamento de Gouraud entre os pontos 2 e 3 pode fazer
+    desaparecer qualquer brilho que exista no ponto 1.
+
+![image](https://user-images.githubusercontent.com/12052283/87851411-f44e6380-c8e7-11ea-9139-bb0090badd18.png)
+
+
+__Sendo B onde está situado o observador e a fonte de luz.__
+
+    O ponto 2 ia estar intensamente iluminado.
+
+    Esta iluminação elevada faria com que o sombreamento de
+    Gouraud alargasse exageradamente a zona com o brilho na
+    direção do ponto 3, quando, na realidade esta zona estaria
+    confinada a uma área mais restrita próxima do ponto 2.
+
+
+### Sombreamento de Phong vs Sombreamento de Gouraud
+
+    O método de Phong é mais pesado do que o sombreamento de 
+    Gouraud, uma vez que é necessário calcular a cor, por
+    aplicação do modelo de sombreamento de Phong a todas as
+    quadrículas da faceta e normalizar as normais locais.
+
+## Limitações do Sombreamento usando aproximações interpoladas
+
+* Silhueta poligonal
+* Distorção de perspetiva
+* Orientação de polígonos
+* Vértices não partilhados
+* Normais incorretas nos vértices
+
+## Silhueta Poligonal
+
+    Este problema manifesta-se no aspeto poligonal das silhuetas
+    dos objetos de cena tesselados por polígonos.
+
+    Tesselações que produzem polígonos de menor dimensão
+    reduzirão os efeitos desta limitação, à custa de um
+    processamento mais pesado, mas não resolverão
+    totalmente o problema.
+
+## Métodos de sombreamento(luz direta)
+
+__Sombreamento constante__
+* Calcula a iluminação de Phong uma vez para todo o polígono
+
+__Sombreamento de Gouraud__
+* Usa o método de iluminação de Phong nos vértices e interpola os valores de iluminação no polígono
+
+__Sombreamento de Phong__
+* Interpola as normais ao longo do polígono e executa a iluminação de Phong ao longo do polígono
+
