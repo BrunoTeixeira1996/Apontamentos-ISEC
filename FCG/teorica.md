@@ -644,3 +644,138 @@ __Sombreamento de Gouraud__
 __Sombreamento de Phong__
 * Interpola as normais ao longo do polígono e executa a iluminação de Phong ao longo do polígono
 
+# Técnicas de iluminação
+
+## O que é que se considera quando se elimina?
+
+* Intensidade e tamanho da luz
+* Cor(Temperatura)
+* Direção 
+
+### Intensidade e tamanho da luz
+
+    Uma luz maior cria uma imagem mais suave e difusa, com
+    sombras mais suaves.
+
+    Uma fonte de luz mais focada e mais dura pode criar mais
+    tensao.
+
+### Cor (Temparatura)
+
+    Uma luz mais fria e azul pode criar sensação de frio
+    e tristeza.
+
+    Uma luz laranja quente e suave pode criar uma atmosfera
+    mais amigável e aberta.
+
+### Direção
+
+    Luz frontal pode tornar o personagem mais aberto e
+    acessível.
+
+    Uma personagem em contraluz pode parecer mais sombrio
+    e perigoso.
+
+    Uma personagem iluminado por baixo vai parecer mais
+    assustador
+
+
+
+# Técnicas de iluminação
+
+## Técnica de iluminação de 3 pontos
+
+    Esta técnica é basicamente um método de iluminação
+    em que se usam 3 posições distintias de fonte de luz
+    para iluminar um ponto de interesse numa cena.
+
+![image](https://user-images.githubusercontent.com/12052283/87855060-5d909f80-c905-11ea-8fae-10668e9a802b.png)
+
+
+## Luz Principal (Key light)
+
+    Vai ser a fonte de luz mais intensa e direita de toda a
+    cena.
+
+    Deve ser a primeira luz a ser configurada e será usada
+    para iluminar a forma do ator.
+
+    Geralmente é colocada na frente do ator e ligeiramente de
+    lado para criar alguma dimensão e profundidade.
+
+__Pontos chave__
+* A luz principal não deve estar perto da câmara porque isso fará com que a ilumin. fique plana e sem carácter
+
+
+## Luz de Preenchimento (Fill light)
+
+    Iluminar as sombras criadas pela luz principal. Essa luz
+    adiciona luz às sombras e reduz o contraste.
+
+    Um exemplo desta luz é por exemplo a luz do céu.
+
+    Geralmente é colocada no lado oposto da luz principal,
+    e geralmente é muito mais escura que a
+    luz principal.
+
+__Pontos Chave__
+* É importante que o preenchimento permaneça indistinto e não crie sombras ou suas próprias caracteristicas.
+
+* Quanto mais perto a luz de preenchimento estiver da câmara, menos sombras ela criará
+
+## Luz de Fundo (Back light ou Rim light)
+
+    Atinge um ator ou objeto por trás e geralmente é colocada
+    acima do objeto que se pretende iluminar.
+
+    É frequentemente usada para separar um objeto ou ator
+    de um fundo escuro e dar ao objeto mais forma e profundiade
+    , delineando-o com uma borda de luz.
+
+    Uma luz de fundo é diferente de uma luz no
+    fundo, que normalmente ilumina o fundo da
+    cena, e não o personagem.
+
+__Pontos Chave__
+* Quando se usa apenas a luz de fundo sem luz principal e a de preenchimento consegue-se obter uma silhueta
+
+
+## Técnica de iluminação de 3 pontos
+
+__Posição tradicional da iluminação de 3 pontos__
+
+    A luz de fundo é colocada em frente à
+    luz principal, fora da cena, para criar
+    uma separação, pois esse lado do cena
+    será mais escuro.
+
+![image](https://user-images.githubusercontent.com/12052283/87855626-13a9b880-c909-11ea-93f7-93772e780378.png)
+
+
+## Soft light
+
+    É um termo que descreve o tamanho de uma fonte de luz e
+    não de um posicionamento em si
+
+## High Key
+
+    É um estilo de iluminação brilhante e sem sombras, com
+    muita luz de preenchimento.
+
+## Luz lateral (side light)
+
+    Uma luz lateral é uma luz que vem do lado paralelo ao ator.
+
+    Ideal para criar um clima dramático e muito usada com 
+    iluminação claro-escuro
+
+# Iluminação de Cena
+
+    Aqui ajustam-se as luzes para apoiar cada uma das cenas
+
+__Objetivos__
+
+* Direcionar a atenção do espectador, para levá-lo a olhar para onde se pretende
+* Fazer as cenas trabalhar em conjunto
+* Tornar os personagens interessantes
+
