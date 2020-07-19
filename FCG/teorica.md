@@ -909,7 +909,7 @@ __Os mipmaps são versões menores e pré-filtradas de uma imagem de textura, re
 
 Sempre que uma imagem contém objetos ou superficies opacas, aqueles que se encontram mais próximos do observador e diretamente na linha de vista de outros objetos, vão bloquear a visão destes últimos.
 
-As superficies ocultas devem ser removidas de movo a que a imagem representada no ecrã seja realista.
+As superficies ocultas devem ser removidas de modo a que a imagem representada no ecrã seja realista.
 
 ## Estratégias Algoritmicas
 
@@ -942,7 +942,7 @@ __Complexidade Algoritmica__
     Limitados a uma precisão bastante inferior, imposta pela
     resolução da superficie de visualização
 
-    Orientados para dispositivos raster, portantos são mais
+    Orientados para dispositivos raster, portanto são mais
     suscetiveis ao aliasing
 
     Operações simples de manipulação de coordenadas espaciais
@@ -972,9 +972,11 @@ __Problema do Algoritmo do Pintor__
 
 ## Algoritmo Z-Buffer
 
+__Permite calcular qual o objeto que se encontra mais próximo da câmara e que ocupa uma dada quadrícula.__
+
 Tornou-se um dos mais utilizador algoritmos de visibilidade
 
-Este facto dve-se à sua simplificade que lhe permite uma fácil implementação quer em software quer em hardware.
+Este facto deve-se à sua simplificade que lhe permite uma fácil implementação quer em software quer em hardware.
 
 __O que é que ele precisa?__
 
@@ -998,6 +1000,7 @@ __Passos do algoritmo Z-Buffer__
 
 ![image](https://user-images.githubusercontent.com/12052283/87878518-3d7be180-c9d4-11ea-889f-06ba547b4fa7.png)
 
+__O final da execução do algoritmo Z-buffer tem armazenado num buffer as cores de cada objeto/quadricula e noutro, o Z-buffer , as distâncias de todos os objetos tambem por quadricula, à câmara.__
 
 __Desempenho do Z-Buffer__
 
@@ -1005,7 +1008,7 @@ __Desempenho do Z-Buffer__
 * Pode ser necessário a sua combinação com outros métodos de recorte para reduzir a complexidade
 
 
-## Árvores BSP (BInary space partition tree)
+## Árvores BSP (Binary space partition tree)
 
     Representa a cena com uma árvore
 
@@ -1057,7 +1060,7 @@ __Muito eficiente quando a cena não muda frequentemente.__
 __Técnicas do Espaço Objeto - aplicadas à geometria da malha:__
 * Árvores BSP com o Algoritmo do Pintor, seleção de portais
 
-__Técnicas do Espaço Imagem - aplicadas quando os pixels são desenhados:__
+__Técnicas do Espaço Imagem - aplicadas quando os pixeis são desenhados:__
 * Z-buffer
 
 ## Remoção de superficies ocultas
