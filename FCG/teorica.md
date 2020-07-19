@@ -902,3 +902,222 @@ __Os mipmaps são versões menores e pré-filtradas de uma imagem de textura, re
 * Aumento no tamanho do arquivo de texturas, pois a cadeia mipmap completa deve ser armazenada juntamente com a textura de resolução total.
 
 * Isso aumenta o tamanho do arquivo em 33%
+
+# Composição
+
+### Remoção de superficies ocultas
+
+Sempre que uma imagem contém objetos ou superficies opacas, aqueles que se encontram mais próximos do observador e diretamente na linha de vista de outros objetos, vão bloquear a visão destes últimos.
+
+As superficies ocultas devem ser removidas de movo a que a imagem representada no ecrã seja realista.
+
+## Estratégias Algoritmicas
+
+### Algoritmos no Espaço Objeto
+
+    Concentram-se na relação geométrica entre objetos no modelo
+    de descrição da cena, com o fim de determinar que partes
+    desses objetos são visiveis
+
+    Estes algoritmos trabalham com uma precisão arbitrária,
+    podendo a imagem final ser aumentada várias vezes sem perda
+    de qualidade
+
+    Orientados para dispositivos de visualização vetoriais
+
+    Operações complexas devido aos cálculos geométricos,
+    logo tem elevada carga computacional
+
+__Complexidade Algoritmica__
+
+    Para uma cena de N objetos a ser desenhada num dispositivo
+    de visualização com P pixeis, a complexidade é de
+    N x N
+
+### Algoritmos no Espaço Imagem
+
+    Determinam para cada quadrícula de imagem, qual o objeto
+    que é visivel
+
+    Limitados a uma precisão bastante inferior, imposta pela
+    resolução da superficie de visualização
+
+    Orientados para dispositivos raster, portantos são mais
+    suscetiveis ao aliasing
+
+    Operações simples de manipulação de coordenadas espaciais
+    dos pontos de imagem, logo a carga computacional é menor
+
+__Complexidade Algoritmica__
+
+    Para uma cena de N objetos a ser desenhada num dispositivo
+    de visualização com P pixeis, a complexidade é de 
+    N x P
+
+
+### Algoritmo do Pintor
+
+    Desenha superficies de trás para a frente, com os polígonos
+    mais próximos a serem "pintados" sobre outros
+
+    Precisa encontrar a ordem para desenhar objetos
+
+![image](https://user-images.githubusercontent.com/12052283/87878217-71560780-c9d2-11ea-807a-ce730938b1c4.png)
+
+
+__Problema do Algoritmo do Pintor__
+
+    O principal problema é determinar a ordem
+
+
+## Algoritmo Z-Buffer
+
+Tornou-se um dos mais utilizador algoritmos de visibilidade
+
+Este facto dve-se à sua simplificade que lhe permite uma fácil implementação quer em software quer em hardware.
+
+__O que é que ele precisa?__
+
+    Precisa de 2 áreas de memória, uma para a construção da
+    imagem(frame-buffer) e outra para armazenamento de 
+    profundidades Z(z-buffer)
+
+
+__Passos do algoritmo Z-Buffer__
+
+* Inicializar o Z-buffer com a profundidade máxima e a memória de imagem(frame-buffer) com a cor de fundo
+* Percorrer todos os polígonos segundo uma ordem arbitrária
+* Para cada polígono
+    * Para cada fragmento da posição (x,y)
+
+        * Se Z(fragmentado) < Z(x,y)
+
+        * WriteZ(x,y,Z(fragmento))
+
+        * WritePixel(x,y,Cor(fragmento))
+
+![image](https://user-images.githubusercontent.com/12052283/87878518-3d7be180-c9d4-11ea-889f-06ba547b4fa7.png)
+
+
+__Desempenho do Z-Buffer__
+
+* Sobrecarga de memória
+* Pode ser necessário a sua combinação com outros métodos de recorte para reduzir a complexidade
+
+
+## Árvores BSP (BInary space partition tree)
+
+    Representa a cena com uma árvore
+
+    A cena é desenhada atravessando a árvore
+
+    Adequado para fazer a renderização de cenas estáticas
+
+
+__Passos__
+
+* Escolher um polígono arbitrariamente
+* Dividir a cena em semi-espaços frontais (em relação à normal) e traseiros
+* Dividir qualquer polígono que esteja sobre os dois lados
+* Escolher um polígono de cada lado - dividir a cena novamente
+* Divida recursivamente
+
+__Representando uma árvore bsp__
+
+    A árvore pode ser atravessada para obter uma ordem dos
+    polígonos para um ponto de vista arbitrário
+
+    De trás para a frente, usando o Algoritmo do Pintor
+
+    Da frente para trás(usando o z-buffer) -> mais eficiente
+
+
+__A geração da árvore requer muito esforço computacional.__
+
+__É fácil, verificar a visibilidade depois da árvore ser construída.__
+
+__Muito eficiente quando a cena não muda frequentemente.__
+
+
+É um método combinado com Z-buffer.
+
+### Seleção de visibilidade de árvores bsp
+
+    As árvores BSP podem ser usadas para selecionar polígonos
+    que caem fora do volume de visualização
+
+        Se o plano intersetar o volume, subdivide para ambos
+        os filhos.
+
+        Se o volume de visualização estiver de um dos lados
+        do plano, selecionar objetos do outro lado.
+
+## Classificação do espaço objeto e do espaço da imagem
+
+__Técnicas do Espaço Objeto - aplicadas à geometria da malha:__
+* Árvores BSP com o Algoritmo do Pintor, seleção de portais
+
+__Técnicas do Espaço Imagem - aplicadas quando os pixels são desenhados:__
+* Z-buffer
+
+## Remoção de superficies ocultas
+
+    O algoritmo Z-buffer é facil de implementar em hardware
+    e é uma técnica padrão
+
+    Há a necessidade de combinar o Z-buffer com uma abordagem
+    baseada em objeto quando existem muitos polígonos - árvores
+    BSP, seleção de portais
+
+    A travessia da frente para trás reduz o custo
+
+# Transparência
+
+## Alpha blending
+
+__Valores alfa descrevem a opacidade de um objeto__
+
+* 1 significa totalmente opaco
+* 0 significa totalmente transparente
+
+## Ordenar por profundidade
+
+    A profundidade e cor de todos os fragmentos que serão
+    projetados no mesmo pixel é armazenado numa lista.
+
+    As cores vão ser misturadas de trás para a frente
+
+
+## Ordenamento
+
+    O ordenamento é caro (árvore BSP)
+    
+    O ordenamento por pixel é muito caro
+
+__Uma solução mais rápida seria a transparência "Porta de Rede"__
+
+## Transparência "porta de rede"
+
+    O objeto é sólido, mas é desenhado com furos usando um
+    padrão pontilhado como uma porta de rede
+
+    A proporção de pixeis desenhados é igual ao valor alfa
+
+    Não há necessidade de realizar o ordenamento, os objetos
+    podem ser desenhados em qualquer ordem
+
+    O Z-buffer pode lidar com as sobreposições de superficies
+    translúcidas
+
+
+## Transparência estocástica
+
+    Usando multisampling, os subpixeis são desenhados e a cor
+    do pixel é calculada usando a média dessas cores
+
+    Usa um padrão aleatório pontilhado de sub-pixel
+
+    Não é necessário ordenamento
+
+    A cor final de um pixel é calculada pela média das cores
+    dos sub-pixéis
