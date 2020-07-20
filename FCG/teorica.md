@@ -1124,3 +1124,97 @@ __Uma solução mais rápida seria a transparência "Porta de Rede"__
 
     A cor final de um pixel é calculada pela média das cores
     dos sub-pixéis
+
+# Iluminação Global
+
+## Técnicas de Rendering
+
+### Métodos de iluminação local (mais rápidos)
+
+    Consideram apenas as fontes de luz e as propriedades dos
+    materiais
+
+* Iluminação de Phong, Sombreamento de Gouraud, Sombreamento de Phong
+
+__São bastantes utilizados para aplicações real-time(jogos, simuladores, etc).__
+
+### Métodos de iluminação global (mais lentos)
+
+    Métodos que simulam as iluminações diretas bem como as 
+    indiretas
+
+* Ray tracing
+* Radiosidade, Photon Mapping
+
+__Lidam com elementos de reflexao, elementos de refração, sombras ...__
+
+## Raytracing
+
+### RayCasting
+
+    O conceito base é , pegar num raio, disparar e ver em que
+    é que ele atinge
+
+![image](https://user-images.githubusercontent.com/12052283/87947457-e0933080-ca92-11ea-9233-1fd82c279697.png)
+
+
+__Conceito do RayTracing__
+
+![image](https://user-images.githubusercontent.com/12052283/87948068-c148d300-ca93-11ea-917d-8b9ae45c5233.png)
+
+__IMPORTANTE__
+
+Vamos atirar raios a partir da câmara, logo os raios vão atravessar o ecrã num dos pixeis da grelha que mostra na imagem e queremos saber onde esse raio bate.
+
+Onde esse raio bater, vou saber qual é a cor que vai preencher o meu pixel.
+
+Se quiser ver se esse objeto está na sombra ou não, atiro um raio em direção à fonte de luz e se ele atingir a fonte de luz, o meu objeto está iluminado.
+
+__Algoritmo do ray tracing__
+
+* Para cada pixel
+* Envia um raio da posição do observador para dentro da cena
+* Envia um raio da interseção para cada luz: cálculo de sombras
+* Gera um novo raio de co* r para cada reflexão e refração
+
+
+## Raytracing distribuido
+
+    Permite que os raios das sombras cheguem a um ponto aleatório na área de luz.
+
+    Permite que os raios especulares sejam perturbados
+    especularmente em torno
+    da reflexão ideal.
+
+# Rasterização(z-buffer) vs Ray Tracing
+
+__Rasterização:__
+* Projeta poligonos no plano da imagem
+* Hardware eficiente. OpenGL, DirectX
+
+__Ray Tracing:__
+* Projeta raios de luz na cena através do plano da imagem
+
+__Questão fundamental da Rasterização__
+
+    Um pixel, qual é a geometria que ele está cobrir
+
+__Questão fundamental do Ray Tracing__
+
+    O que é que é visivel ao longo de um determinado raio
+
+
+__Desvantagens da Rasterização__
+
+    Por um único pixel, posso estar a calcular demasiados
+    triângulos que vao-se sobrepondo uns aos outros(esforço 
+    inutil de calculo)
+
+    
+
+__Desvantagens do Ray Tracing__
+
+    Testar demasiadas interceções por raio
+
+
+
