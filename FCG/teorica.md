@@ -1000,7 +1000,9 @@ __Passos do algoritmo Z-Buffer__
 
 ![image](https://user-images.githubusercontent.com/12052283/87878518-3d7be180-c9d4-11ea-889f-06ba547b4fa7.png)
 
-__O final da execução do algoritmo Z-buffer tem armazenado num buffer as cores de cada objeto/quadricula e noutro, o Z-buffer , as distâncias de todos os objetos tambem por quadricula, à câmara.__
+__O final da execução do algoritmo Z-buffer tem, no buffer de cor armazenada a imagem final, após a remoção dos elementos ocultos.__
+
+__Guarda tambem no Z-buffer a distância dos objetos à câmara__
 
 __Desempenho do Z-Buffer__
 
