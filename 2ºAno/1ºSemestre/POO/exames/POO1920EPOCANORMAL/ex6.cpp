@@ -21,6 +21,8 @@ public:
     Bilhete &operator=(const Bilhete &b){
         passageiro = b.passageiro;
         passaporte = b.passaporte;
+        
+        id_malas.clear();
 
         for(size_t i = 0; i < b.id_malas.size(); i++){
             id_malas.push_back(b.id_malas[i]);
