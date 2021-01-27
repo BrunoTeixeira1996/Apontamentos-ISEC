@@ -13,6 +13,7 @@ public:
     Funcionario(const string &n): nome(n){}
     virtual string getNome()const = 0;
     virtual string cumprimentar()const = 0;
+    virtual ~Funcionario(){} //invoca o destrutor de cada derivada
 };
 
 class Doutor: public Funcionario {
@@ -52,6 +53,11 @@ public:
     funcionarios.push_back(new Doutor("D2"));
     funcionarios.push_back(new Engenheiro("E1"));
     funcionarios.push_back(new Engenheiro("E2"));
+  }
+    
+   ~Empresa() {
+        for(auto funcionario : funcionarios)
+            delete funcionario; // liberta memória dinâmica do funcionario
   }
   
   void cumprimentar()const{
