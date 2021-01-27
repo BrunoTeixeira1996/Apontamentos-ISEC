@@ -64,6 +64,22 @@ public:
       for(auto a : funcionarios)
         cout << a->cumprimentar();
   }
+  
+  // remove o engenheiro/doutor com esse nome do vector  
+  void remove(string nome) 
+  {  
+     int posicao = 0; //Guarda posição onde se encontra no vetor
+     for(auto funcionario : funcionarios)
+     {
+         if (funcionario->getNome() == nome)
+         {
+             delete funcionario; //liberta memoria dinâmica
+             funcionarios.erase(funcionarios.begin() + posicao); //elimina essa celula do vetor
+             break;
+         }
+         posicao++; //atualiza poisção
+     }
+ }
 
 };
 
