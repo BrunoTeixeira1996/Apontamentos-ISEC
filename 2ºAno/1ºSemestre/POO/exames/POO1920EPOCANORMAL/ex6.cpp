@@ -19,6 +19,7 @@ public:
     
     //operador de atribuicao
     Bilhete &operator=(const Bilhete &b){
+        if (this == &b) { return *this; } //protege de uma potencial auto-atribuição
         passageiro = b.passageiro;
         passaporte = b.passaporte;
         
