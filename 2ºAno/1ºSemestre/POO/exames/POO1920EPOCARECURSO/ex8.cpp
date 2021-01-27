@@ -14,7 +14,7 @@ class Elementos{
 public:
     virtual string getTitulo()const{}
     virtual int getAltura()const{}
-    virutal int getLargura()const{}
+    virtual int getLargura()const{}
   
 };
 
