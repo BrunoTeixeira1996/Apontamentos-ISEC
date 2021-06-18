@@ -1,0 +1,189 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_PRINCIPAL MENU
+BEGIN
+    MENUITEM "Login",                       ID_LOGIN
+    POPUP "Operações"
+    BEGIN
+        MENUITEM "Consultas",                   ID_CONSULTA
+        MENUITEM "Levantamentos",               ID_LEVANTAMENTO
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_LOGIN DIALOGEX 0, 0, 275, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Login"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,83,100,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,100,50,14
+    LTEXT           "Login:",IDC_STATIC,57,43,20,8
+    LTEXT           "Password:",IDC_STATIC,57,65,34,8
+    EDITTEXT        IDC_EDIT_LOGIN,101,43,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,101,64,92,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_LEVANTAMENTO DIALOGEX 0, 0, 143, 195
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Levantamento"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Duplo clique para selecionar o montante",IDC_STATIC,7,180,128,8
+    LISTBOX         IDC_LIST_MONTANTES,7,7,129,157,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_DIALOG_LEVANTAMENTO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG_LOGIN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_LEVANTAMENTO AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR ACCELERATORS
+BEGIN
+    "C",            ID_ACCELERATOR_C,       VIRTKEY, NOINVERT
+    VK_SPACE,       ID_ACCELERATOR_L,       VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_POINTER             CURSOR                  "cursor1.cur"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_STR_CONSULTA        "Esta funcionalidade não está implementada"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
