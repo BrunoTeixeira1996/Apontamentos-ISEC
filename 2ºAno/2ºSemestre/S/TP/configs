@@ -1,0 +1,11 @@
+Password enable em todos os routers
+-------------------------------------
+conf t ... enable secret myenapwd
+
+Password na con 0
+-------------------
+conf t ... service password-encryption
+conf t ... line con 0
+password myenapwd
+
+

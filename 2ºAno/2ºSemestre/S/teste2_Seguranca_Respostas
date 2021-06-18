@@ -1,0 +1,81 @@
+Pergunta 1
+--------------
+Para desenvolver um determinado mecanismo de encriptação, é importante ter em atenção alguns conceitos como por exemplo a Criptanálise.
+A criptanálise é a ciencia que permite avaliar de maneira positiva ou negativa um certo mecanismo de encriptação, ou seja, permite verificar se a criptografia é ou não válida.
+É entao a ciência que permite tornar inacessível o conteudo de mensagens criptografadas e descobrir as técnicas de criptografia usadas não conhecendo as chaves em uso.
+Podia por exemplo fazer alguns testes de bruteforce para tentar quebrar o mecanismo criado por mim e isto era feito na criptoanálise.
+--------------
+
+Pergunta 2
+--------------
+A diferença entre o CBC e o CFB é que na encriptação do CBC era usado o plaintext primeiro na primeira iteração em vez do initialization vector que é usado no CFB.
+Outra diferença bastante importante é que no CFB não existe processo de desencriptação, ou seja, o processo de encriptação entra no processo de encriptação e de desencriptação.
+Outra diferença é que no CFB nunca ha uma relação entre o mecanismo de encriptação do ciclo anterior anterior com o proximo, no entanto no CBC, no processo de desencriptação, o ciphertext utilizado na iteração seguinte vai ser usado como initialization vector na proxima iteração, fazendo aqui uma relação entre iterações.
+--------------
+
+Pergunta 3
+--------------
+Numa cifra contínua, contrariamente à cifra por blocos, a informação é encriptada de uma só vez, esse fator é um fator extremamente importante no que toca a implementação do principio da confusão e da difusão.
+Neste tipo de cifras o objetivo é que as comunicações sejam encriptadas bit a bit, ou seja, se eu recebo um ficheiro desencriptado(representa 1 bit) vou aplicar um XOR(representa 1 bit) com uma chave(representa 1 bit) e gero assim um ciphertext.
+Aplicar o princípio da confusão neste tipo de cifras é dificil porque uma vez que fazemos apenas uma única o vez o processo de encriptação, a relação entre o plaintext e o ciphertext podem ser parecidas, violando assim o principio da confusão, gerando aqui um grave problema de segurança.
+O principio da difusão tambem é um problema porque a difusão é mais facilmente aplicada quando fazemos várias iterações para encriptar um plaintext aplicando em todas elas uma difusão(por exemplo um XOR) para que quando se altera na chave ou no plaintext, o resultado final passa a ser completamente diferente.
+Como só usamos uma iteração,  apenas vamos fazer uma única difusão
+--------------
+
+
+
+
+Pergunta 4
+--------------
+Nas cifras simétricas é usada uma chave comum entre pelo menos duas entidades, ao contrário das cifras assimétricas que cada entidade detem um par de chaves , normalmente chamadas de chaves públicas e privadas.
+As cifras simétricas são muito mais simples que as cifras assimétricas, no entanto as mesmas não garantem uma confidencialidade tão boa como as assimétricas, uma vez que as entidades podem perder ou expor as chaves quebrando logo aqui o termo de segurança.
+As cifras simétricas obrigam que o recetor e o emissor tenham a mesma chave, em certas situações não é algo grave, no entanto noutras passa a ser.
+As assimétricas têm algumas vantajens comparativamente com as simétricas, por exemplo, as chaves não são partilhadas entre recetor e emissor, apenas as chaves públicas são, tendo sempre uma camada extra de segurança.
+Não é possível nunca determinar uma chave privada a partir de uma chave pública e este uso de par de chaves é sempre de uso individual.
+Numa comunicação na Internet normalmente usam-se chaves simétricas devido a serem menos complexas, no entanto, quando a chave simétrica "passo do prazo", o pedido de uma nova chave simétrica é feito usando uma chave assimétrica.
+Uma aplicação bastante conhecida que usa chaves assimétricas é o caso do WireGuard que é uma VPN P2P que utiliza então o par de chaves, pública e privada, podendo ter um servidor que detem as chaves públicas dos seus clientes como uma espécie de autenticação sem nome de utilizador.
+--------------
+
+
+
+Pergunta 5
+--------------
+Usando o E(R[0]) e aplicando um XOR com a chave (K) (Key mixing) obtemos o seguinte resultado -> 101000000011.
+Depois disto dividimos o numero ao meio ficamos com
+101000 e 000011
+Retiramos o primeiro bit  e ultimo e ficamos com
+
+1º PRIMEIRO
+10 -> 2 em decimal
+0100 -> 4 em decimal
+
+2ºSEGUNDO
+01 -> 1 em decimal
+0001-> 1 em decimal
+
+
+Indo à matriz com o PRIMEIRO temos o resultado 13 (linha 2 coluna 4)
+Indo à matriz com o SEGUNDO temos o resultado 15 (linha 1 coluna 1)
+
+Depois fazendo a substituição, temos de representar os decimais encontrados em binários, ou seja
+13 -> 1101
+15 -> 1111
+--------------
+
+
+Pergunta 6
+--------------
+O primeiro processo a ser feito na Rede de Feistel é dividir o bloco do plaintext ao meio criando assim um L0(left) e um R0(right).
+Depois de termos esta partição feita, temos então o bloco inicial (L0) e o bloco final(R0).
+Seguidamente a metade do lado inicial, vai ser injetada numa operação XOR com uma função de encriptação designada por F.
+A função de encriptação(F)(função que define o algoritmo usado)é alimentada pela chave(K) e tambem pelo bloco final (R0).
+O resultado desta operação é posto no bloco final(R1), ou seja, (L0) passa para (R1) e (R0) passa para (L1) sem nada mudado, sendo que ao trocar o bloco que era o bloco final leva com um XOR ficando tambem assim encriptado.
+Isto é feito o número de vezes que for definido no algoritmo.
+No DES começamos com um bloco de permutação chamado de IP e terminamos com outro bloco de permutação chamado de FP.
+Primeiramente começamos com a expensão em que 32 bits é expandida para um bloco de 48 bits, sendo logo a seguir aplicado a mistura da chave, mistura esta que recebe um XOR com a chave derivada.
+Depois temos a substituição, ou seja, o resultado anterior é dividido em 8 grupos de 6 bits em que cada grupo usa uma Substitution-Box para produzir 4 bits usando uma transformação não linear.
+Na substituição é usada uma espécie de tabela onde é gerado um valor decimal passado depois para binário.
+Neste caso, ao usarmos o DES vamos aplicar 16 iterações na rede de Feistel.
+No caso do AES, este não utiliza a Rede Feistel mas sim uma matriz de 4 bytes por 4 bytes chamada de estado.
+O mesmo utiliza então uma rede de permutação e substituição não aplicando a rede de Feistel.
+--------------
