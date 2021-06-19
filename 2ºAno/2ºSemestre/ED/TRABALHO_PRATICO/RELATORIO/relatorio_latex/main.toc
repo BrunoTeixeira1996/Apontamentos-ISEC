@@ -1,0 +1,28 @@
+\babel@toc {portuguese}{}
+\contentsline {section}{\numberline {1}Introdução}{3}{section.1}%
+\contentsline {paragraph}{}{3}{section*.3}%
+\contentsline {section}{\numberline {2}Topologia}{3}{section.2}%
+\contentsline {section}{\numberline {3}Endereçamento}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Endereçamento privado}{3}{subsection.3.1}%
+\contentsline {paragraph}{}{3}{section*.4}%
+\contentsline {subsection}{\numberline {3.2}Endereçamento público}{4}{subsection.3.2}%
+\contentsline {paragraph}{}{4}{section*.5}%
+\contentsline {section}{\numberline {4}Filiais}{4}{section.4}%
+\contentsline {paragraph}{}{4}{section*.6}%
+\contentsline {subsection}{\numberline {4.1}Coimbra}{4}{subsection.4.1}%
+\contentsline {paragraph}{}{4}{section*.7}%
+\contentsline {subsection}{\numberline {4.2}Porto}{5}{subsection.4.2}%
+\contentsline {paragraph}{}{5}{section*.8}%
+\contentsline {subsection}{\numberline {4.3}Lisboa}{5}{subsection.4.3}%
+\contentsline {paragraph}{}{5}{section*.9}%
+\contentsline {subsection}{\numberline {4.4}Funchal}{5}{subsection.4.4}%
+\contentsline {paragraph}{}{5}{section*.10}%
+\contentsline {subsection}{\numberline {4.5}Faro}{6}{subsection.4.5}%
+\contentsline {paragraph}{}{6}{section*.11}%
+\contentsline {subsection}{\numberline {4.6}Comunicação entre filiais}{6}{subsection.4.6}%
+\contentsline {paragraph}{}{6}{section*.12}%
+\contentsline {section}{\numberline {5}Saída primária e secundária}{7}{section.5}%
+\contentsline {paragraph}{}{7}{section*.13}%
+\contentsline {section}{\numberline {6}Tabelas de \emph {routing}}{8}{section.6}%
+\contentsline {section}{\numberline {7}Conclusão}{10}{section.7}%
+\contentsline {paragraph}{}{10}{section*.14}%

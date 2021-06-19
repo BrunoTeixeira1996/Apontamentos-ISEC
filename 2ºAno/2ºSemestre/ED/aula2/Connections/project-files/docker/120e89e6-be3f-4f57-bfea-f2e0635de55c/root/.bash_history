@@ -1,0 +1,4 @@
+ls
+ls
+ifconfig
+ifconfig

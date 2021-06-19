@@ -1,0 +1,5 @@
+644:0:0:/root/.bashrc
+644:0:0:/root/.profile
+644:0:0:/root/.gns3_perms
+600:0:0:/root/.bash_history
+700:0:0:/root

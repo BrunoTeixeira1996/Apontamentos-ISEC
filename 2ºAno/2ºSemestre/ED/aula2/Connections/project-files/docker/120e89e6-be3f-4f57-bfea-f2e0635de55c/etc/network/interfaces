@@ -1,0 +1,16 @@
+#
+# This is a sample network config uncomment lines to configure the network
+#
+
+
+# Static config for eth0
+auto eth0
+iface eth0 inet static
+	address 192.168.20.1
+	netmask 255.255.255.0
+	gateway 192.168.20.254
+#	up echo nameserver 192.168.0.1 > /etc/resolv.conf
+
+# DHCP config for eth0
+# auto eth0
+# iface eth0 inet dhcp
