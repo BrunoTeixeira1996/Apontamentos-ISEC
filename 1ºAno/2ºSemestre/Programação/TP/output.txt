@@ -1,0 +1,6 @@
+Id: 20 Nome: PauloPires1  Idade: 23 Estado: S 
+Id: 10 Nome: AnaLebre34A  Idade: 55 Estado: I 
+Id: 4 Nome: Tomas111  Idade: 12 Estado: S 
+Id: 6 Nome: PauloPires2  Idade: 67 Estado: I 
+Id: 4 Nome: LuisaSantos  Idade: 40 Estado: I 
+Id: 30 Nome: Zulmira2A  Idade: 17 Estado: S 

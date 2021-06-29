@@ -1,0 +1,46 @@
+===============================================================================
+|	                   Dados relativos à primeira iteração                |
+===============================================================================
+
+===============================================================================
+|	                        Médias                                        |
+|                                                                             |
+|	 A média de idades de pessoas doentes é de 53.50                      |
+| A pessoa que está ha mais tempo doente tem 67 anos e está há 10 dias doente |
+===============================================================================
+
+======================================
+|	         Taxas               |
+|                                    |
+|	Taxa de saudaveis: 0.50      | 
+|	Taxa de doentes: 0.33        | 
+|	Taxa de imunes: 0.17         | 
+|	Taxa de recuperados: 0.00    | 
+======================================
+
+===============================================================================
+|	                   Dados relativos à última iteração                |
+===============================================================================
+
+======================================
+|	         Taxas               |
+|                                    |
+|	Taxa de saudaveis: 0.50      | 
+|	Taxa de doentes: 0.00        | 
+|	Taxa de imunes: 0.50         | 
+|	Taxa de recuperados: 0.00    | 
+======================================
+
+================================
+ | Houve no total 12 iterações |
+=================================
+===============================================================================
+|	                   Informação final das pessoas                       |
+===============================================================================
+
+Id: 20 Nome: PauloPires1  Idade: 23 Estado: S 
+Id: 10 Nome: AnaLebre34A  Idade: 55 Estado: I 
+Id: 4 Nome: Tomas111  Idade: 12 Estado: S 
+Id: 6 Nome: PauloPires2  Idade: 67 Estado: I 
+Id: 4 Nome: LuisaSantos  Idade: 40 Estado: I 
+Id: 30 Nome: Zulmira2A  Idade: 17 Estado: S 
