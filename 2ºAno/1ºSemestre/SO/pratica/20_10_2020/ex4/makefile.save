@@ -1,0 +1,5 @@
+
+	gcc programa.c -c
+
+	gcc imprime.c -c
+g	cc programa.o imprime.o -o ex3

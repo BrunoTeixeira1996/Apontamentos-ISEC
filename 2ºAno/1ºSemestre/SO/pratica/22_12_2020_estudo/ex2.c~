@@ -1,0 +1,86 @@
+#include "util.h"
+
+typedef struct {
+    char fifo[20];
+    int continua;
+    pthread_mutex_t *ptrinco;
+}TDATA;
+
+void acorda(int s){}
+
+void *mostra(void *dados){
+    /* tarefa #1*/
+    int *res;
+
+    TDATA *pdata;
+    pdata = (TDATA *)dados; // vamos usar o pdata como argumento desta funcao
+    res = (int *) malloc(sizeof(int)); // nr de pedidos chegados do cliente
+    *res = 0;
+
+    /*TRATAR O SINAL SIGUSR1 - sigaction*/
+    /*CRIAR FIFO - mkfifo();*/
+    /*ABRIR FIFO (O_RDWR) - open()*/
+    do{
+        /*RECEBER INFORMACAO DO CLIENTE - read();*/
+        pthread_mutex_lock(pdata->ptrinco);
+        /*ENVIAR INFORMACAO PARA O MONITOR - printf();*/
+        (*res)++;
+
+        pthread_mutex_unlock(pdata->ptrinco);
+
+    }while(pdata->continua);
+    /*AVISAR O CLIENTE PARA SAIR - kill()*/
+    /*FECHAR FIFO - close()*/
+    /*ELIMINAR FIFO - unlink()*/
+
+    pthread_exit(res);
+
+}
+
+
+int main(void){
+    char str[40];
+    int *resultado;
+    TDATA tinfo[2];
+    pthread_t tarefa[2];
+
+    printf("Sou o processo %d...\n",getpid());
+    // guardar o identificador da thread (&tarefa), funcao associada à thread (mostra) , o que queremos passar à funcao(void*)NULL (nao queremos passar nada)
+
+
+    // aqui estamos a criar 3 threads
+    for(int i = 0; i < 2; i++){
+        /*ENVIAR UMA STRING A THREAD - "ESQ" ou "DIR" tinfo[i].fifo*/
+        tinfo[i].letra = 'A' + i; // aqui tem de ser a string
+        tinfo[i].continua = 1;
+        pthread_create(&tarefa[i],NULL,mostra,(void *)&tinfo[i]);
+
+    }
+
+
+    do{
+        /*tarefa #0*/
+
+        printf("COMANDO:\n");
+        scanf("%s", str);
+        printf("Recebi o comando '%s'...\n",str);
+
+    }while(strcmp(str,"sair")!= 0);
+
+    for(int i = 0; i < 2; i++){
+        printf("Vou pedir a thread #%d para terminar ... ",i+1); fflush(stdout);
+        tinfo[i].continua = 0;
+        /*ENVIAR SINAL SIGUSR1 A THREAD PARA DESBLOQUEAR O READ - pthread_kill()*/
+        pthread_join(tarefa[i],(void *)&resultado); // esperar pelo fim da thread que criei
+        printf("Thread %d terminou [%d]!!!\n", i,*resultado);
+
+        free(resultado);
+
+    }
+
+
+
+
+
+    exit(0);
+}
