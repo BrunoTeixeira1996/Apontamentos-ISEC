@@ -1,0 +1,1 @@
+Como jogar ao BigSmall -> "+" ou "-" para adivinhar se o proximo numero e maior ou menor que o anterior

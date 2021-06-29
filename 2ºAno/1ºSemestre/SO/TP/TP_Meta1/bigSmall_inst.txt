@@ -1,0 +1,6 @@
+=============================================================================================
+				How to play BigSmall
+Usage : "+" or "-" to guess if the next number is bigger or smaller than the previous one
+Quit : "#quit" use q to quit the game
+Default will give the options
+=============================================================================================
