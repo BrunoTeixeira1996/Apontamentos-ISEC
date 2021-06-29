@@ -1,0 +1,4 @@
+﻿  Banco.cpp
+C:\Users\brun0\Desktop\POO\exercicios\aula11_11_2020_estudo\aula11estudo\aula11estudo\Banco.cpp(33,12): error C2065: 'contas': undeclared identifier
+C:\Users\brun0\Desktop\POO\exercicios\aula11_11_2020_estudo\aula11estudo\aula11estudo\Banco.cpp(33,34): error C2065: 'contas': undeclared identifier
+C:\Users\brun0\Desktop\POO\exercicios\aula11_11_2020_estudo\aula11estudo\aula11estudo\Banco.cpp(35,4): error C2065: 'contas': undeclared identifier

@@ -1,0 +1,8 @@
+﻿  aula2_revisao.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  aula2.cpp
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(638,5): warning MSB8015: Forcing a rebuild of all source files due to the contents of "C:\Users\brun0\Desktop\POO\exercicios\aula_12_10_2020\aula_12_10_2020\Debug\aula_12_10_2020.tlog\link.command.1.tlog" being invalid.
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(638,5): warning MSB8015: Forcing a rebuild of all source files due to the contents of "C:\Users\brun0\Desktop\POO\exercicios\aula_12_10_2020\aula_12_10_2020\Debug\aula_12_10_2020.tlog\link.command.1.tlog" being invalid.
+  aula_12_10_2020.vcxproj -> C:\Users\brun0\Desktop\POO\exercicios\aula_12_10_2020\Debug\aula_12_10_2020.exe
+  aula_12_10_2020.vcxproj -> C:\Users\brun0\Desktop\POO\exercicios\aula_12_10_2020\Debug\aula_12_10_2020.pdb (Partial PDB)

@@ -1,0 +1,4 @@
+﻿  aula.cpp
+c:\users\brun0\desktop\poo\exercicios\aula26_10_2020\estudo\ex7\aula.cpp(6): warning C4172: returning address of local variable or temporary: aux
+  ex7.vcxproj -> C:\Users\brun0\Desktop\POO\exercicios\aula26_10_2020\Estudo\Debug\ex7.exe
+  ex7.vcxproj -> C:\Users\brun0\Desktop\POO\exercicios\aula26_10_2020\Estudo\Debug\ex7.pdb (Partial PDB)

@@ -1,0 +1,11 @@
+﻿  Source.cpp
+  pessoa.cpp
+  conta.cpp
+  banco.cpp
+c:\users\brun0\desktop\poo\exercicios\aula_11_11_2020\project1\project1\banco.cpp(22): error C2228: left of '.getCC' must have class/struct/union
+  c:\users\brun0\desktop\poo\exercicios\aula_11_11_2020\project1\project1\banco.cpp(22): note: type is 'const Pessoa *'
+  c:\users\brun0\desktop\poo\exercicios\aula_11_11_2020\project1\project1\banco.cpp(22): note: did you intend to use '->' instead?
+c:\users\brun0\desktop\poo\exercicios\aula_11_11_2020\project1\project1\banco.cpp(40): error C2228: left of '.getCC' must have class/struct/union
+  c:\users\brun0\desktop\poo\exercicios\aula_11_11_2020\project1\project1\banco.cpp(40): note: type is 'const Pessoa *'
+  c:\users\brun0\desktop\poo\exercicios\aula_11_11_2020\project1\project1\banco.cpp(40): note: did you intend to use '->' instead?
+  Generating Code...

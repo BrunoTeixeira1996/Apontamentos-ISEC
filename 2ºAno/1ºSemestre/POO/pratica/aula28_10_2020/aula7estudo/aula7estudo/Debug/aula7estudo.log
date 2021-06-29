@@ -1,0 +1,7 @@
+﻿  ex9d.cpp
+c:\users\brun0\desktop\poo\exercicios\aula28_10_2020\aula7estudo\aula7estudo\ex9d.cpp(103): warning C4018: '<=': signed/unsigned mismatch
+c:\users\brun0\desktop\poo\exercicios\aula28_10_2020\aula7estudo\aula7estudo\ex9d.cpp(86): warning C4715: 'Televisao::setAumentaVolume': not all control paths return a value
+c:\users\brun0\desktop\poo\exercicios\aula28_10_2020\aula7estudo\aula7estudo\ex9d.cpp(99): warning C4715: 'Televisao::setDiminuiVolume': not all control paths return a value
+c:\users\brun0\desktop\poo\exercicios\aula28_10_2020\aula7estudo\aula7estudo\ex9d.cpp(113): warning C4715: 'Televisao::setCanal': not all control paths return a value
+  aula7estudo.vcxproj -> C:\Users\brun0\Desktop\POO\exercicios\aula28_10_2020\aula7estudo\Debug\aula7estudo.exe
+  aula7estudo.vcxproj -> C:\Users\brun0\Desktop\POO\exercicios\aula28_10_2020\aula7estudo\Debug\aula7estudo.pdb (Partial PDB)

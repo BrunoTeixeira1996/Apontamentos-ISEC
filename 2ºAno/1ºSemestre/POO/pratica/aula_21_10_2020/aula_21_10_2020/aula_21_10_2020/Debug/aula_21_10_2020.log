@@ -1,0 +1,3 @@
+﻿  dadosVenda.cpp
+c:\users\brun0\desktop\poo\exercicios\aula_21_10_2020\aula_21_10_2020\aula_21_10_2020\dadosvenda.cpp(7): error C2572: 'DadosVenda::DadosVenda': redefinition of default argument: parameter 1
+  c:\users\brun0\desktop\poo\exercicios\aula_21_10_2020\aula_21_10_2020\aula_21_10_2020\dadosvenda.h(10): note: see declaration of 'DadosVenda::DadosVenda'

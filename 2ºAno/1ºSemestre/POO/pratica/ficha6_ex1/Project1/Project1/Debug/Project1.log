@@ -1,0 +1,5 @@
+﻿  Peixe.cpp
+  Source.cpp
+C:\Users\brun0\Desktop\POO\exercicios\ficha6_ex1\Project1\Project1\Source.cpp(11,30): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  Project1.vcxproj -> C:\Users\brun0\Desktop\POO\exercicios\ficha6_ex1\Project1\Debug\Project1.exe
