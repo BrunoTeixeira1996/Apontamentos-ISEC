@@ -1,0 +1,393 @@
+body{
+  font-family: Industry, monospace;
+  width: 100%;
+  margin:0;
+  padding: 0;
+}
+
+/* navigation bar*/
+.menu,
+.sub-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background:#002A3A;
+
+}
+.menu .ativo{
+  background-color: #bb3333;
+}
+.menu .ativo:hover{
+  background-color: #ce4b4b;
+}
+.menu li:last-child{
+
+  float: right; /*serve para colocar o login à direita*/
+  }
+  .clearfix:after{
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+
+  .menu a {
+    text-align: center;
+    display: inline-block;
+    padding:14px 16px;
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .menu li {
+    position: relative;
+  }
+  .menu > li {
+    float: left;
+  }
+  .menu > li:hover {
+    background: #006e99;
+  }
+  .menu li:hover > .sub-menu {
+    display: block;
+  }
+  .sub-menu {
+    display: none;
+    position: absolute;
+    min-width: 96px;
+  }
+  .sub-menu li:hover {
+    background: #006e99;
+  }
+  .sub-menu .sub-menu {
+    top: 0;
+    left: 100%;
+  }
+
+  /* navbar responsiva*/
+
+  @media screen and (max-width: 800px) {
+    .menu a {
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .menu a {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .menu a {
+      font-size: 16px;
+    }
+  }
+
+  /* imagens */
+  .container img{
+    width: 100%;
+  }
+
+  .column{
+    float:left;
+    width: 33.33%;
+    padding:15px;
+    box-sizing: border-box;
+  }
+
+  .container::after{
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .descricao {
+    margin: 10px 0 0 0;
+    font-variant: small-caps;
+    font-family: Arial;
+    font-weight: bold;
+    color: #bb3333;
+  }
+  .descricao a{
+    text-decoration: none;
+    color: #bb3333;
+  }
+
+  /* formulario */
+
+  #formulario{
+    color:#FFFFFF;
+    padding: 0.8em;
+  }
+
+  #sugestao{
+    background-color: #002A3A;
+    border-radius: 1em;
+    padding:1em;
+  }
+
+  #sugestao h2{
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+
+  #sugestao label{
+    color: white;
+    font-size: 1.2em;
+    font-weight: 150;
+    padding-top: 0.8em;
+    display: inline-flex;
+  }
+
+  #sugestao input{
+    box-sizing: border-box;
+    font-size: 1 em;
+    font-weight: 100;
+    padding: 0.8em;
+    border: solid white;
+    border-radius: 0.4em;
+    border-width: 0.05em;
+    width: 100%;
+  }
+  #enviar {
+    background-color: #bb3333;
+    color:white;
+    margin-top: 1.5em;
+    padding: 0.8em;
+    border: none;
+  }
+  #sugestao textarea{
+    box-sizing: border-box;
+    font-size: 1 em;
+    font-weight: 100;
+    padding: 0.8em;
+    border: solid white;
+    border-radius: 0.4em;
+    border-width: 0.05em;
+    width: 100%;
+  }
+
+  /* formulario responsivo*/
+
+  @media (min-width:600px){
+    #formulario #sugestao{
+      margin: auto;
+      width: 50%;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+    #sugestao {
+      background-color: #002A3A;
+    }
+    #enviar {
+      background-color: #bb3333;
+    }
+  }
+
+
+
+  /* slideshow imagens */
+  .slideImage{
+    width: 50%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  @media(max-width:600px){
+    .slideImage{
+      margin: auto;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+  }
+
+  /* secçao " quem somos" */
+  #quemsomos{
+    text-align: justify;
+    padding:0px 10px 0px 10px;
+  }
+
+  .box-conteudo{
+    margin: 10px 10px 20px 0px; /* top, rigth, bottom, left*/
+    padding: 10px;
+    border-top: 1px inset #006e99;
+    border-bottom: 1px inset #006e99;
+  }
+
+  .box-conteudo h1{
+    font-size: 20px;
+    margin: 0px;
+  }
+
+
+  /*secçao "o que fazemos" */
+  .oquefazemos{
+    text-align: justify;
+    padding:20px 10px 10px 10px;
+  }
+
+  .oquefazemos p{
+    font-size: 18px;
+  }
+
+  .conteudo{
+    margin: 10px 0 0 0;
+    font-family: Industry, monospace;
+    font-weight: bold;
+  }
+
+  .conteudo a{
+    text-decoration: none;
+    color:#004966;
+  }
+
+  .collapse {
+    background-color: #004966;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  .active, .collapse:hover {
+    background-color: #002A3A;
+  }
+
+  /* simbolo +*/
+
+  .collapse-container{
+    margin: 70px;
+  }
+  .collapse:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2212";
+  }
+
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+  .content ul{
+    font-weight: bold;
+  }
+  .content li{
+    color: #004966;
+  }
+
+  /*secçao "recolha"*/
+
+  .recolha-container h4{
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+
+  .recolha-container p{
+    text-align:center;
+    padding-bottom: 10px;
+  }
+
+  .recolha-titulo{
+    text-transform: uppercase;
+    background-color: #FBB243;
+    text-align: center;
+  }
+
+
+  .recolha-imagem{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media(max-width:800px){
+    .recolha-imagem{
+      margin: auto;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 30px;
+    }
+  }
+
+  @media(max-width:600px){
+    .recolha-imagem{
+      margin: auto;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+  }
+
+  @media(max-width:400px){
+    .recolha-imagem{
+      margin: auto;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+  }
+/*secçao "resultados"*/
+  .retomas-imagem{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+/* registar */
+
+#registar {
+  background-color: #bb3333;
+  color:white;
+  margin-top: 1.5em;
+  padding: 0.8em;
+  border: none;
+}
+
+.sucesso{
+  text-transform: uppercase;
+  background-color: #009900;
+  text-align: center;
+}
+
+/* video index*/
+#videos{
+  height: auto;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0px 10px 0px;
+}
+.slogan{
+  padding-bottom: 50px;
+  padding-left: 30px;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+.icon{
+  padding-top: 55px;
+  text-align: center;
+}
