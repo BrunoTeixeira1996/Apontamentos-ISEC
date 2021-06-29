@@ -1,0 +1,3 @@
+duna 2
+planicie 1
+castelo 3
