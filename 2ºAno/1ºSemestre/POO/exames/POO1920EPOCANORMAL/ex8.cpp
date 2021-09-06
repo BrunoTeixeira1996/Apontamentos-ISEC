@@ -28,12 +28,11 @@ public:
     int crescimento(int dist_separacao)const{}
 };
 
-class Pantacao{
+class Plantacao{
     vector<Plantas*> plantas;
     void crescePlantas()const;
 };
 
 int main(){
-
-
+    
 }
