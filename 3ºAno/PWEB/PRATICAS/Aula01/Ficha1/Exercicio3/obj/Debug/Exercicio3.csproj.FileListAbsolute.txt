@@ -1,0 +1,7 @@
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio3\bin\Debug\Exercicio3.exe.config
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio3\bin\Debug\Exercicio3.exe
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio3\bin\Debug\Exercicio3.pdb
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio3\obj\Debug\Exercicio3.csproj.AssemblyReference.cache
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio3\obj\Debug\Exercicio3.csproj.CoreCompileInputs.cache
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio3\obj\Debug\Exercicio3.exe
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio3\obj\Debug\Exercicio3.pdb

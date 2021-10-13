@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercicio2
 {   
-    // classe que derivad da classe Funcionario
+    // classe que deriva da classe Funcionario
     class FuncionarioComSalarioFixo : Funcionario
     {
         public float SalarioBase { get; set; }
