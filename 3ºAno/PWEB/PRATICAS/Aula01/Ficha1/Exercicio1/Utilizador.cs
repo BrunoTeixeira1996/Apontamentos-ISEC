@@ -79,10 +79,10 @@ namespace Exercicio1
         //remove tarefas concluidas
         public void RemoveTarefasConcluidas()
         {
-            for(var i = 0; i < Tarefas.Count; i++)
+            foreach(var i in Tarefas.ToList())
             {
-                if (Tarefas[i].Estado.ToString() == "Concluida")
-                    Tarefas.Remove(Tarefas[i]);
+                if (i.Estado.ToString() == "Concluida")
+                    Tarefas.Remove(i);
             }
             
         }
@@ -90,20 +90,21 @@ namespace Exercicio1
         //remove tarefas pessoais
         public void RemoveTarefasPessoais()
         {
-            for(var i = 0; i < Tarefas.Count; i++)
+            foreach(var i in Tarefas.ToList())
             {
-                if(Tarefas[i].Categoria.ToString() == "Pessoal")
-                    Tarefas.Remove(Tarefas[i]);
+                if (i.Categoria.ToString() == "Pessoal")
+                    Tarefas.Remove(i);
             }
+           
         }
 
         //remove tarefas com baixa prioridade
         public void RemoveTarefasBaixaPrioridade()
         {
-            for(var i = 0; i < Tarefas.Count; i++)
+            foreach (var i in Tarefas.ToList())
             {
-                if (Tarefas[i].Prioridade.ToString() == "Baixa")
-                    Tarefas.Remove(Tarefas[i]);
+                if (i.Prioridade.ToString() == "Baixa")
+                    Tarefas.Remove(i);
             }
 
         }
@@ -111,11 +112,11 @@ namespace Exercicio1
         // remove uma certa tarefa
         public void RemoveTarefa(Tarefa tarefa)
         {
-            for(var i = 0; i < Tarefas.Count; i++)
+            foreach (var i in Tarefas.ToList())
             {
-                if(tarefa == Tarefas[i])
+                if (tarefa == i)
                 {
-                    Tarefas.Remove(Tarefas[i]);
+                    Tarefas.Remove(i);
                     break;
                 }
             }

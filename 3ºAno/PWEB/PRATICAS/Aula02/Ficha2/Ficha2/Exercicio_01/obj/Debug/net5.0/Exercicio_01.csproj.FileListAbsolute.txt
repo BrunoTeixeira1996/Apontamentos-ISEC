@@ -1,0 +1,16 @@
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\bin\Debug\net5.0\Exercicio_01.exe
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\bin\Debug\net5.0\Exercicio_01.deps.json
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\bin\Debug\net5.0\Exercicio_01.runtimeconfig.json
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\bin\Debug\net5.0\Exercicio_01.runtimeconfig.dev.json
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\bin\Debug\net5.0\Exercicio_01.dll
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\bin\Debug\net5.0\ref\Exercicio_01.dll
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\bin\Debug\net5.0\Exercicio_01.pdb
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\obj\Debug\net5.0\Exercicio_01.csproj.AssemblyReference.cache
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\obj\Debug\net5.0\Exercicio_01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\obj\Debug\net5.0\Exercicio_01.AssemblyInfoInputs.cache
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\obj\Debug\net5.0\Exercicio_01.AssemblyInfo.cs
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\obj\Debug\net5.0\Exercicio_01.csproj.CoreCompileInputs.cache
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\obj\Debug\net5.0\Exercicio_01.dll
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\obj\Debug\net5.0\ref\Exercicio_01.dll
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\obj\Debug\net5.0\Exercicio_01.pdb
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha2\Ficha2\Exercicio_01\obj\Debug\net5.0\Exercicio_01.genruntimeconfig.cache

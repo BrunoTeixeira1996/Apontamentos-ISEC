@@ -5,3 +5,10 @@ C:\Users\brun0\source\repos\Ficha1\Exercicio1\obj\Debug\Exercicio1.csproj.Assemb
 C:\Users\brun0\source\repos\Ficha1\Exercicio1\obj\Debug\Exercicio1.csproj.CoreCompileInputs.cache
 C:\Users\brun0\source\repos\Ficha1\Exercicio1\obj\Debug\Exercicio1.exe
 C:\Users\brun0\source\repos\Ficha1\Exercicio1\obj\Debug\Exercicio1.pdb
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio1\bin\Debug\Exercicio1.exe.config
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio1\bin\Debug\Exercicio1.exe
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio1\bin\Debug\Exercicio1.pdb
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio1\obj\Debug\Exercicio1.csproj.AssemblyReference.cache
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio1\obj\Debug\Exercicio1.csproj.CoreCompileInputs.cache
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio1\obj\Debug\Exercicio1.exe
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha1\Exercicio1\obj\Debug\Exercicio1.pdb
