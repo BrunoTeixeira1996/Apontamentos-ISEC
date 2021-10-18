@@ -1,0 +1,113 @@
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+%\usepackage[backend=biber, style=ieee]{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+
+% Definições
+%
+\def\titulo{Relatório - Titulo}
+\def\data{15 de junho de 2019}
+\def\departamento{\ac{deis}}
+\def\empresa{\ac{deis}}
+\graphicspath{{./imagens}}
+
+\begin{document}
+	\begin{titlepage}
+    	\begin{center}
+    		\includegraphics[width=0.4\textwidth]{isec}
+    		
+    		\vspace*{\fill}
+    		
+    		\Huge
+    		\textbf{Nome da Cadeira}
+    		
+    		\huge
+    		Nome do trabalho
+    		
+    		\vspace{0.5cm}
+    		\LARGE
+    		2021 - 2022
+    		
+    		\vspace{1.5cm}
+    		
+    		\textbf{Bruno Teixeira - 2019100036}
+    		
+    		\vfill
+    		\vspace*{\fill}
+    		
+    		\normalsize
+    		Licenciatura em Engenharia Informática \\
+                \data
+    	\end{center}
+      \end{titlepage}
+
+\pagenumbering{roman}
+
+%%%%%% RESUMO %%%%%%
+\begin{abstract}
+  \paragraph{}Pequena introdução do que foi proposto
+\end{abstract}
+
+
+\tableofcontents
+% \listoftables     % descomentar se necessário
+ \listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introdução}
+%\vspace{-2mm}
+\label{chap.introducao}
+%\vspace{-8mm}
+\paragraph{}Introdução ...
+
+
+\chapter{Desenvolvimento}\label{Uma label qualquer}
+\paragraph{}qualquer coisa....
+
+
+\section{Isto é uma secção}
+\paragraph{}qualquer coisa.....
+
+\begin{figure}[H]
+\center
+\includegraphics[width=8cm]{imagens/isec.png}
+\caption{Imagem do isec - Exemplo}
+\label{fig.nav}
+\end{figure}
+
+\chapter{Conclusão}\label{Conclusão}
+\paragraph{}qualquer coisa.....
+
+
+
+
+
+\begin{acronym}
+\acro{isec}[ISEC]{Instituto Superior de Engenharia de Coimbra}
+\acro{deis}[DEIS]{Departamento de Engenharia Informática e de Sistemas}
+\acro{lei}[LEI]{Licenciatura em Engenharia Informática}
+\end{acronym}
+
+
+\begin{thebibliography}{9}
+\bibitem{stackov} 
+Stack Overflow,
+\\\texttt{https://stackoverflow.com/}
+
+\end{thebibliography}
+
+
+\end{document}
