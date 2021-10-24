@@ -25,4 +25,25 @@ var resultado2 = from e in ListaUm select e.Split(" ").Lenght);
 
 - Quando quero filtrar e transformar os dados utilizado o `Select`
 
+- Integrando o **Where** com o **Select**
+
+```csharp
+// linq com extensions methods
+            var solucao = ListaUm.Where(s => s.Contains("C#"))
+                 .Select(s => new
+                 {
+                     frase = s.Trim(), // remove espacos a mais
+                     primeira = s.Trim().Split(" ").First(), // vai buscar a primeira palavra
+                     // se tiver apenas uma palavra escreve "NAO TEM" caso contrario escreve a ultima palvra
+                     ultima = (s.Trim().Split(" ")).Count() == 1 ? "NAO TEM" : s.Trim().Split(" ").Last()
+                 });
+
+            foreach(var x in solucao)
+                Console.WriteLine("Frase: " + x.frase + "\n\tPrimeira Palavra: " + x.primeira + "\n\tUltima Palavra: " + x.ultima);
+```
+
 ## Referências
+
+- https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq
+
+- https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods
