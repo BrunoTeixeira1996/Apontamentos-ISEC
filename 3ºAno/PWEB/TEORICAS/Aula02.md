@@ -45,4 +45,29 @@
 
 ![image](https://user-images.githubusercontent.com/12052283/137710868-779af74e-9456-4443-8f0b-0de76581de77.png)
 
-...continuar os apontamentos...
+## Parâmetros *ref* vs *out*
+
+![image](https://user-images.githubusercontent.com/12052283/139414239-b66b78f9-cbb6-4636-9776-18c499335075.png)
+
+## Membros virtuais
+
+- É um membro na classe base que define uma implementação por omissão que pode ser alterada (overridden) pela classe derivada
+
+## Classes Abstratas e Sealed
+
+- A palavra chave *abstract* permite criar classes e membros de classes incompletas que têm de ser implementados na classe derivada
+
+- A palavra chave *sealed* evita que a classe oumembros virtuais sejam herdadados
+
+## Palavra chave *as* em Csharp
+
+- *as* tenta converter um objeto para um tipo específico e retorna *null* se a conversão falhar
+
+![image](https://user-images.githubusercontent.com/12052283/139419498-87e2b3ff-9e5c-4d45-874f-a67e09a91780.png)
+
+## Palavra chave *is* em Csharp
+
+- *is* permite de forma rápida determinar se um determinado objecto é compatível com um tipo e devolve *false* caso não sejam
+
+
+![image](https://user-images.githubusercontent.com/12052283/139419620-ca35efba-f52b-4ace-a737-1762cf46d133.png)
