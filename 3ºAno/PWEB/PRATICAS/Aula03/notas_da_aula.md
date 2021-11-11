@@ -35,3 +35,27 @@
 ![image](https://user-images.githubusercontent.com/12052283/140767392-25dce33a-735e-4ad4-a8e9-ebe0cfa73de5.png)
 
 - Operações CRUD é Create Read Update e Delete , são operações a uma base de dados
+
+## Como fazer o ex4
+
+- Criamos uma ASP.NET Core Web App MVC
+
+![image](https://user-images.githubusercontent.com/12052283/141285920-d5db81eb-5522-4654-b354-716a0e4f31ad.png)
+
+- Ao criarmos uma Web App MVC convem começarmos pelos Models (`Code First`)
+- Entao criamos um Model vazio (`UCs.cs`) e colocamos os atributos dessa classe com um construtor
+
+![image](https://user-images.githubusercontent.com/12052283/141286476-736733b5-7ea1-45ee-97f2-00a25c9ec819.png)
+
+
+- Depois adicionamos à BD esse modelo
+  - `Add-Migration "Inicial"`
+  - `Update-Database`
+
+- Depois vamos criar um Controlador para fazer todas as operações CRUD, então criamos um `MVC Controller with views,using entity Framework`
+
+![image](https://user-images.githubusercontent.com/12052283/141287355-14f40bb3-3e7f-4622-9d30-3fbdde7ef276.png)
+
+- Depois disto, temos novamente de fazer uma nova migração
+  - `Add-Migration "UCs"`
+  - `Update-Database`
