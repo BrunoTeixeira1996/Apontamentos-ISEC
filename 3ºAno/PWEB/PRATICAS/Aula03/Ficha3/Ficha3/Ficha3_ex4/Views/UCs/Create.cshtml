@@ -1,0 +1,53 @@
+﻿@model Ficha3_ex4.Models.UCs
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Criar</h1>
+
+<h4>UCs</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ECTS" class="control-label"></label>
+                <input asp-for="ECTS" class="form-control" />
+                <span asp-validation-for="ECTS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Licenciatura" class="control-label"></label>
+                <input asp-for="Licenciatura" class="form-control" />
+                <span asp-validation-for="Licenciatura" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ramo" class="control-label"></label>
+                <input asp-for="Ramo" class="form-control" />
+                <span asp-validation-for="Ramo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Semestre" class="control-label"></label>
+                <input asp-for="Semestre" class="form-control" />
+                <span asp-validation-for="Semestre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para trás</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
