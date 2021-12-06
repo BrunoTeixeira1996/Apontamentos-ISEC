@@ -1,0 +1,52 @@
+﻿@model Maquina_de_Calcular_Avancada.Models.CalculadoraAvancadaViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h4>CalculadoraAvancadaViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OperandoEsq" class="control-label"></label>
+                <input asp-for="OperandoEsq" class="form-control" />
+                <span asp-validation-for="OperandoEsq" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperandoDir" class="control-label"></label>
+                <input asp-for="OperandoDir" class="form-control" />
+                <span asp-validation-for="OperandoDir" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="NDigitos" class="control-label"></label>
+                @Html.DropDownListFor(model => model.NDigitos, Model.Digitos, new { @class = "form-control" })
+                <span asp-validation-for="NDigitos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input name="Operacao" type="submit" value="Adição" class="btn btn-primary" />
+                <input name="Operacao" type="submit" value="Subtração" class="btn btn-primary" />
+                <input name="Operacao" type="submit" value="Multiplicação" class="btn btn-primary" />
+                <input name="Operacao" type="submit" value="Divisão" class="btn btn-primary" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Resultado" class="control-label"></label>
+                <input asp-for="Resultado" class="form-control" />
+                <span asp-validation-for="Resultado" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,12 @@
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\bin\Debug\net5.0\CalculadoraSimples.deps.json
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\bin\Debug\net5.0\CalculadoraSimples.dll
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\bin\Debug\net5.0\ref\CalculadoraSimples.dll
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\bin\Debug\net5.0\CalculadoraSimples.pdb
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\obj\Debug\net5.0\CalculadoraSimples.csproj.AssemblyReference.cache
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\obj\Debug\net5.0\CalculadoraSimples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\obj\Debug\net5.0\CalculadoraSimples.AssemblyInfoInputs.cache
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\obj\Debug\net5.0\CalculadoraSimples.AssemblyInfo.cs
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\obj\Debug\net5.0\CalculadoraSimples.csproj.CoreCompileInputs.cache
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\obj\Debug\net5.0\CalculadoraSimples.dll
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\obj\Debug\net5.0\ref\CalculadoraSimples.dll
+C:\Users\brun0\Desktop\PWEB\PRATICAS\Ficha5\CalculadoraSimples\CalculadoraSimples\obj\Debug\net5.0\CalculadoraSimples.pdb

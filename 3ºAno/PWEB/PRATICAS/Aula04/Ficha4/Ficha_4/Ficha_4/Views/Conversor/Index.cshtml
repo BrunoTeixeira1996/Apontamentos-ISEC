@@ -1,0 +1,61 @@
+﻿@model Ficha_4.Models.Conversor
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h4>Conversor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @Html.DropDownListFor(model => model.UnidadeInicial, new SelectList(ViewBag.ListaDeMoedas.Items, "Value","Text"))
+                
+                @*<select name="UnidadeInicial">
+                    @foreach(var x in ViewBag.ListaDeMoedas.Items)
+            {
+                <option value="@x.Value">@x.Text</option>*@
+            }
+                </select>
+                <label asp-for="UnidadeInicial" class="control-label"></label>
+                <input asp-for="UnidadeInicial" class="form-control" />
+                <span asp-validation-for="UnidadeInicial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnidadeFinal" class="control-label"></label>
+                <input asp-for="UnidadeFinal" class="form-control" />
+                <span asp-validation-for="UnidadeFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorInicial" class="control-label"></label>
+                <input asp-for="ValorInicial" class="form-control" />
+                <span asp-validation-for="ValorInicial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorFinal" class="control-label"></label>
+                <input asp-for="ValorFinal" class="form-control" />
+                <span asp-validation-for="ValorFinal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TaxaDeCambio" class="control-label"></label>
+                <input asp-for="TaxaDeCambio" class="form-control" />
+                <span asp-validation-for="TaxaDeCambio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

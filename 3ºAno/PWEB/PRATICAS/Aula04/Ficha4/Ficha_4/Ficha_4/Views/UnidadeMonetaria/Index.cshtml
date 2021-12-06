@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Ficha_4.Models.UnidadeMonetaria>
+
+<h3>To do: Lista de Unidades Monetárias</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Valor Euro</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var x in Model)
+            {
+        <tr>
+            <td>@x.Codigo</td>
+            <td>@x.ValorPorEuro</td>
+            <td>@x.Data</td>
+        </tr>
+            }
+    </tbody>
+</table>

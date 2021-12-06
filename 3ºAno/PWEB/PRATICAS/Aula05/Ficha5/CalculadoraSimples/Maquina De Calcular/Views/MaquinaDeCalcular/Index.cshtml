@@ -1,0 +1,47 @@
+﻿@model Maquina_De_Calcular.Models.CalculadoraViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h4>CalculadoraViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="op1" class="control-label"></label>
+                <input asp-for="op1" class="form-control" />
+                <span asp-validation-for="op1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="op2" class="control-label"></label>
+                <input asp-for="op2" class="form-control" />
+                <span asp-validation-for="op2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input name="Operacao" type="submit" value="Adição" class="btn btn-primary" />
+                <input name="Operacao" type="submit" value="Subtração" class="btn btn-primary" />
+                <input name="Operacao" type="submit" value="Multiplicação" class="btn btn-primary" />
+                <input name="Operacao" type="submit" value="Divisão" class="btn btn-primary" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="resultado" class="control-label"></label>
+                <input asp-for="resultado" class="form-control" />
+                <span asp-validation-for="resultado" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

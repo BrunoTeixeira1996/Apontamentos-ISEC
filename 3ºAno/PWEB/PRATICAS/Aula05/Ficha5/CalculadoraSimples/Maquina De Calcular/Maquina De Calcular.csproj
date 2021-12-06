@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Maquina_De_Calcular</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="CalculadoraSimples">
+      <HintPath>..\CalculadoraSimples\bin\Debug\net5.0\CalculadoraSimples.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+</Project>
