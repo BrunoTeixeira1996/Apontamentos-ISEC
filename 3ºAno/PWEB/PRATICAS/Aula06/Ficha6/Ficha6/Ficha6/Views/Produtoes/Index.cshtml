@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Ficha6.Models.Produto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-controller="Produtoes" asp-action="Index" method="get">
+    <b>Filtrar por Categoria</b>
+    <select name="id" asp-items="ViewBag.IdCategoria"></select>
+    <input type="submit" value="Filtrar" />
+
+    <b>Ordenar</b>
+    <select>
+        <option value="asc">Ascendente</option>
+        <option value="desc">Descendente</option>
+    </select>
+</form>
+<!---
+<form asp-controller="Produtoes" asp-action="Index" method="get">
+    Filtrar por categoria <td>@Html.DropDownList("Id", (IEnumerable<SelectListItem>)ViewData["IdCategoria"])</td>
+    <input type="submit" value="Filtrar" />
+</form>
+-->
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCategoriaNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeProduto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdCategoriaNavigation.NomeCategoria)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdProduto">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdProduto">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdProduto">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
