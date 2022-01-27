@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{listingsutf8}
+\usepackage[portuguese]{babel}
+
+\graphicspath{{./images/}}
+
+\begin{document}
+	\begin{titlepage}
+    	\begin{center}
+    		\includegraphics[width=0.6\textwidth]{logo-isec}
+    		
+    		\vspace*{\fill}
+    		
+    		\Huge
+    		\textbf{Proposta de trabalho}
+    		
+    		\huge
+    		Disponibilidade e Desempenho
+    		
+    		\vspace{0.5cm}
+    		\LARGE
+    		2021 - 2022
+    		
+    		\vspace{1.5cm}
+    		
+    		\textbf{Bruno Teixeira}\\
+                a2019100036@isec.pt
+    		
+    		\vfill
+    		\vspace*{\fill}
+    		
+    		\normalsize
+    		Licenciatura de Engenharia Informática \\
+    		25 de outubro de 2021
+    	\end{center}
+    \end{titlepage}
+
+
+\section{Identificação do aluno}      
+\textbf{Nome} : Bruno Alexandre Ferreira Pinto Teixeira \\
+\textbf{Número de aluno} : 2019100036 \\
+\textbf{Email} : a2019100036@isec.pt
+
+\section{Identificação da tecnologia em causa}
+\paragraph{}
+Balanceamento de carga em servidores web com HAProxy e Keepalived.
+
+\section{Breve contextualização da tecnologia}
+\paragraph{}
+O HAProxy é um serviço que garante um balanceamento de carga para distribuir o acesso externo por vários servidores. Ao adicionar o Keepalived é possível criar redundância na arquitetura pois aqui são usados pelo menos dois balanceamentos de carga fazendo com que, se um estiver inoperacional o outro entra em ação.
+
+\section{Descrição clara das perguntas a que pretende responder durante o seu estudo}
+\begin{itemize}
+  \item O que são Proxies?
+  \item Quão importante é distribuir pedidos por vários servidores? 
+  \item Tipos de balanceamento de carga
+  \item Algoritmos usados em balanceamentos de carga
+  \item E se o único servidor de HAProxy estiver inoperacional?
+\end{itemize}
+
+\section{Descrição clara dos cenários que pretende operacionalizar durante o estudo para encontrar as respostas identificadas}
+\paragraph{}Durante o estudo pretendo criar uma aplicação web simples que será usada em dois servidores distintos. Antes do cliente se conectar à aplicação web, o mesmo irá passar pelo HAProxy que será responsável por distribuir o acesso à aplicação. \\
+Em conjunto com o HAProxy será usado o Keepalive para obter uma maior redundância no balanceamento de carga da arquitetura final.
+
+
+\section{Identificação dos recursos necessários para realização prática dos cenários descritos}
+\paragraph{}
+Para a realização prática do trabalho irei utilizar um servidor ESXi com algumas máquinas virtuais (servidores web e HAProxies) sendo que a aplicação web será apenas acedida na LAN do ESXi.
+
+\end{document}

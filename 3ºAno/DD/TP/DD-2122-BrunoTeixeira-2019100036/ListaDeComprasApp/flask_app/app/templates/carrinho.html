@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script>
+  function remove_entry(){
+      var entry = {id:event.srcElement.id};
+
+      fetch(`${window.origin}/apagar_artigo`,{
+	  method: "POST",
+	  credentials: "include",
+	  body: JSON.stringify(entry),
+	  cache: "no-cache",
+	  headers: new Headers({
+	      "content-type":"application/json"
+	  })
+      })
+
+  }
+</script>
+
+{% if customer_list|length > 0 %}
+<div class="col-8">
+<div class="container">
+      <table class="table table-bordered text-center" id="mytable">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tipo</th>
+	    <th scope="col">Quantidade</th>
+            <th scope="col">Local de Compra</th>
+	    {% for item in customer_list %}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+	    <td>
+	      <form>
+		  <button id={{ item[0] }} type="submit" class="btn btn-danger" onclick="remove_entry();">Apagar</button>
+		</form>
+	    </td>
+	    {% endfor %}
+	    </tr>
+        </tbody>
+      </table>
+</div>
+</div>
+{% else %}
+
+<div class="d-flex justify-content-center">
+<div class=" d-flex alert alert-dark text-center" style="max-height:62px">Neste momento não tem nenhum produto no seu cesto
+</div>
+</div>
+{% endif %}
+
+
+  <div class="col-4">
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Carrinho</legend>
+                <div class="form-group">
+                    {{ form.product_type.label(class="form-control-label") }}
+                    {% if form.product_type.errors %}
+                        {{ form.product_type(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.product_type.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.product_type(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.quantity.label(class="form-control-label") }}
+                    {% if form.quantity.errors %}
+                        {{ form.quantity(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.quantity.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.quantity(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+		<div class="form-group">
+                    {{ form.local.label(class="form-control-label") }}
+                    {% if form.local.errors %}
+                        {{ form.local(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.local.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.local(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+              {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+    </div>
+
+{% endblock content %}

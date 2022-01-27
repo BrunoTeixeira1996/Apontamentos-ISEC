@@ -1,0 +1,16 @@
+\BOOKMARK [0][-]{chapter.1}{Introdu\347\343o}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Desenvolvimento}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Descri\347\343o das tecnologias usadas}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Flask, MariaDB e Galera Cluster}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{HAProxy}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{KeepAlived}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.5}{Ambiente para as experi\352ncias}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.5.1}{Aplica\347\343o Web}{section.2.5}% 8
+\BOOKMARK [2][-]{subsection.2.5.2}{Configura\347\343o do HAProxy}{section.2.5}% 9
+\BOOKMARK [2][-]{subsection.2.5.3}{Configura\347\343o do KeepAlived}{section.2.5}% 10
+\BOOKMARK [1][-]{section.2.6}{Experi\352ncias}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.6.1}{Experi\352ncia 01}{section.2.6}% 12
+\BOOKMARK [2][-]{subsection.2.6.2}{Experi\352ncia 02}{section.2.6}% 13
+\BOOKMARK [2][-]{subsection.2.6.3}{Experi\352ncia 03}{section.2.6}% 14
+\BOOKMARK [2][-]{subsection.2.6.4}{Experi\352ncia 04}{section.2.6}% 15
+\BOOKMARK [0][-]{chapter.3}{Conclus\343o}{}% 16

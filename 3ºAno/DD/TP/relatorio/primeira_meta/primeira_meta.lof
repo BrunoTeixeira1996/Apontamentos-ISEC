@@ -1,0 +1,23 @@
+\babel@toc {portuguese}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Index - Aplicação Web\relax }}{3}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Carrinho - Aplicação Web\relax }}{4}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Configuração - HAProxy\relax }}{5}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Estatísticas - HAProxy\relax }}{5}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Configuração - Keepalived\relax }}{6}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Esquema - Experiência 01\relax }}{7}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Wireshark - Experiência 01\relax }}{7}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Single Point of Failure - Experiência 01\relax }}{8}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Esquema inicial - Experiência 02\relax }}{8}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Esquema com \emph {fail-over} - Experiência 02\relax }}{9}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Wireshark no 192.168.1.183 - Experiência 02\relax }}{9}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Estado inicial do KeepAlived em ambos os servidores - Experiência 02\relax }}{10}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Wireshark no 192.168.1.183 com o HAProxy desligado - Experiência 02\relax }}{10}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Estado atual do KeepAlived em ambos os servidores - Experiência 02\relax }}{11}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Wireshark no 192.168.1.183 com o HAProxy retomado - Experiência 02\relax }}{11}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Estado final do KeepAlived - Experiência 02\relax }}{12}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Single Point of Failure - Experiência 02\relax }}{12}{figure.caption.40}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Estrutura da aplicação web - Guião\relax }}{13}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Variáveis de ambiente - Guião\relax }}{14}{figure.caption.45}%

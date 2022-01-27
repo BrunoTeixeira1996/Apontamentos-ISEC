@@ -1,0 +1,59 @@
+\babel@toc {portuguese}{}
+\contentsline {chapter}{\numberline {1}Introdução}{1}{chapter.1}%
+\contentsline {paragraph}{}{1}{section*.3}%
+\contentsline {paragraph}{}{1}{section*.4}%
+\contentsline {paragraph}{}{1}{section*.5}%
+\contentsline {chapter}{\numberline {2}Desenvolvimento}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Descrição das tecnologias usadas}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Flask, MariaDB e Galera Cluster}{2}{section.2.2}%
+\contentsline {paragraph}{}{2}{section*.6}%
+\contentsline {paragraph}{}{2}{section*.7}%
+\contentsline {section}{\numberline {2.3}HAProxy}{2}{section.2.3}%
+\contentsline {paragraph}{}{2}{section*.8}%
+\contentsline {paragraph}{}{2}{section*.9}%
+\contentsline {section}{\numberline {2.4}KeepAlived}{2}{section.2.4}%
+\contentsline {paragraph}{}{2}{section*.10}%
+\contentsline {section}{\numberline {2.5}Ambiente para as experiências}{3}{section.2.5}%
+\contentsline {paragraph}{}{3}{section*.11}%
+\contentsline {subsection}{\numberline {2.5.1}Aplicação Web}{3}{subsection.2.5.1}%
+\contentsline {paragraph}{}{3}{section*.12}%
+\contentsline {subsection}{\numberline {2.5.2}Configuração do HAProxy}{4}{subsection.2.5.2}%
+\contentsline {paragraph}{}{4}{section*.15}%
+\contentsline {subsection}{\numberline {2.5.3}Configuração do KeepAlived}{5}{subsection.2.5.3}%
+\contentsline {paragraph}{}{5}{section*.18}%
+\contentsline {paragraph}{}{6}{section*.20}%
+\contentsline {section}{\numberline {2.6}Experiências}{6}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Experiência 01}{6}{subsection.2.6.1}%
+\contentsline {paragraph}{}{6}{section*.21}%
+\contentsline {subsubsection}{Resultado}{7}{section*.23}%
+\contentsline {subsubsection}{Problemas encontrados na Experiência 01}{7}{section*.25}%
+\contentsline {paragraph}{}{7}{section*.26}%
+\contentsline {subsection}{\numberline {2.6.2}Experiência 02}{8}{subsection.2.6.2}%
+\contentsline {subsubsection}{Resultado}{9}{section*.30}%
+\contentsline {paragraph}{}{10}{section*.33}%
+\contentsline {paragraph}{}{11}{section*.36}%
+\contentsline {subsubsection}{Problemas encontrados na Experiência 02}{12}{section*.39}%
+\contentsline {paragraph}{}{12}{section*.40}%
+\contentsline {subsection}{\numberline {2.6.3}Experiência 03}{13}{subsection.2.6.3}%
+\contentsline {paragraph}{}{13}{section*.42}%
+\contentsline {paragraph}{}{13}{section*.43}%
+\contentsline {paragraph}{}{13}{section*.45}%
+\contentsline {paragraph}{}{13}{section*.47}%
+\contentsline {paragraph}{}{14}{section*.49}%
+\contentsline {paragraph}{}{14}{section*.51}%
+\contentsline {subsubsection}{Resultado}{15}{section*.53}%
+\contentsline {paragraph}{}{15}{section*.54}%
+\contentsline {paragraph}{}{15}{section*.56}%
+\contentsline {subsubsection}{Problemas encontrados na Experiência 03}{15}{section*.59}%
+\contentsline {paragraph}{}{15}{section*.60}%
+\contentsline {subsection}{\numberline {2.6.4}Experiência 04}{16}{subsection.2.6.4}%
+\contentsline {paragraph}{}{16}{section*.62}%
+\contentsline {paragraph}{}{16}{section*.64}%
+\contentsline {paragraph}{}{17}{section*.66}%
+\contentsline {subsubsection}{Resultado}{18}{section*.70}%
+\contentsline {paragraph}{}{18}{section*.71}%
+\contentsline {paragraph}{}{18}{section*.73}%
+\contentsline {paragraph}{}{18}{section*.75}%
+\contentsline {chapter}{\numberline {3}Conclusão}{20}{chapter.3}%
+\contentsline {paragraph}{}{20}{section*.77}%
+\contentsline {paragraph}{}{20}{section*.78}%

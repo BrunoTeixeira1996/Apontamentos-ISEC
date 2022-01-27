@@ -1,0 +1,55 @@
+\babel@toc {portuguese}{}
+\contentsline {chapter}{\numberline {1}Introdução}{1}{chapter.1}%
+\contentsline {paragraph}{}{1}{section*.3}%
+\contentsline {section}{\numberline {1.1}Ambiente para as experiências}{1}{section.1.1}%
+\contentsline {paragraph}{}{1}{section*.4}%
+\contentsline {subsection}{\numberline {1.1.1}Aplicação Web}{1}{subsection.1.1.1}%
+\contentsline {paragraph}{}{1}{section*.5}%
+\contentsline {subsection}{\numberline {1.1.2}Configuração do HAProxy}{2}{subsection.1.1.2}%
+\contentsline {paragraph}{}{2}{section*.8}%
+\contentsline {subsection}{\numberline {1.1.3}Configuração do KeepAlived}{4}{subsection.1.1.3}%
+\contentsline {paragraph}{}{4}{section*.11}%
+\contentsline {paragraph}{}{4}{section*.13}%
+\contentsline {chapter}{\numberline {2}Guião}{5}{chapter.2}%
+\contentsline {paragraph}{}{5}{section*.14}%
+\contentsline {section}{\numberline {2.1}Guião - Experiência 01}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}HAProxy}{5}{subsection.2.1.1}%
+\contentsline {paragraph}{}{5}{section*.15}%
+\contentsline {subsection}{\numberline {2.1.2}Aplicação Web}{5}{subsection.2.1.2}%
+\contentsline {subsubsection}{Estrutura da aplicação}{5}{section*.16}%
+\contentsline {subsubsection}{Variáveis de ambiente usadas}{6}{section*.18}%
+\contentsline {subsubsection}{requirements.txt}{6}{section*.20}%
+\contentsline {subsubsection}{sync\_between\_webservers.sh}{7}{section*.21}%
+\contentsline {subsubsection}{flask\_app}{7}{section*.22}%
+\contentsline {subsubsection}{carrinho.py}{7}{section*.23}%
+\contentsline {subsubsection}{config.py}{7}{section*.24}%
+\contentsline {subsubsection}{app}{7}{section*.25}%
+\contentsline {subsubsection}{\_\_init\_\_.py}{7}{section*.26}%
+\contentsline {subsubsection}{forms.py}{8}{section*.27}%
+\contentsline {subsubsection}{models.py}{8}{section*.28}%
+\contentsline {subsubsection}{routes.py}{9}{section*.29}%
+\contentsline {subsubsection}{static}{10}{section*.30}%
+\contentsline {subsubsection}{main.css}{10}{section*.31}%
+\contentsline {subsubsection}{templates}{12}{section*.32}%
+\contentsline {subsubsection}{layout.html}{12}{section*.33}%
+\contentsline {subsubsection}{index.html}{13}{section*.34}%
+\contentsline {subsubsection}{carrinho.html}{13}{section*.35}%
+\contentsline {subsubsection}{login.html}{15}{section*.36}%
+\contentsline {subsection}{\numberline {2.1.3}Base de Dados}{16}{subsection.2.1.3}%
+\contentsline {subsubsection}{Criação da base de dados}{16}{section*.37}%
+\contentsline {subsubsection}{Criação das tabelas}{16}{section*.38}%
+\contentsline {subsubsection}{Inserção de dados nas tabelas}{17}{section*.39}%
+\contentsline {subsubsection}{Selecionar todos os artigos do carrinho do Cliente 1}{17}{section*.40}%
+\contentsline {section}{\numberline {2.2}Guião - Experiência 02}{17}{section.2.2}%
+\contentsline {paragraph}{}{17}{section*.41}%
+\contentsline {paragraph}{}{17}{section*.42}%
+\contentsline {section}{\numberline {2.3}Guião - Experiência 03}{17}{section.2.3}%
+\contentsline {paragraph}{}{17}{section*.43}%
+\contentsline {paragraph}{}{17}{section*.44}%
+\contentsline {paragraph}{}{18}{section*.46}%
+\contentsline {paragraph}{}{18}{section*.48}%
+\contentsline {paragraph}{}{18}{section*.50}%
+\contentsline {paragraph}{}{19}{section*.52}%
+\contentsline {section}{\numberline {2.4}Guião - Experiência 04}{19}{section.2.4}%
+\contentsline {paragraph}{}{19}{section*.54}%
+\contentsline {paragraph}{}{20}{section*.56}%

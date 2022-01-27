@@ -1,0 +1,38 @@
+\babel@toc {portuguese}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Index - Aplicação Web\relax }}{3}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Carrinho - Aplicação Web\relax }}{4}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Configuração - HAProxy\relax }}{5}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Estatísticas - HAProxy\relax }}{5}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Configuração - Keepalived\relax }}{6}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Esquema - Experiência 01\relax }}{7}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Wireshark - Experiência 01\relax }}{7}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Single Point of Failure - Experiência 01\relax }}{8}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Esquema - Experiência 02\relax }}{8}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Esquema com \emph {fail-over} - Experiência 02\relax }}{9}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Wireshark no 192.168.1.183 - Experiência 02\relax }}{9}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Estado inicial do KeepAlived em ambos os servidores - Experiência 02\relax }}{10}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Wireshark no 192.168.1.183 com o HAProxy desligado - Experiência 02\relax }}{10}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Estado atual do KeepAlived em ambos os servidores - Experiência 02\relax }}{11}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Wireshark no 192.168.1.183 com o HAProxy retomado - Experiência 02\relax }}{11}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Estado final do KeepAlived - Experiência 02\relax }}{12}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Single Point of Failure - Experiência 02\relax }}{12}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Configuração do \emph {Galera Cluster} no mariadb01 - Experiência 03\relax }}{13}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Configuração do \emph {Galera Cluster} no mariadb02 - Experiência 03\relax }}{13}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Tamanho do \emph {Galera Cluster} - Experiência 03\relax }}{14}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Configuração do HAProxy - Experiência 03\relax }}{14}{figure.caption.50}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Esquema - Experiência 03\relax }}{14}{figure.caption.52}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Primeira conexão - Experiência 03\relax }}{15}{figure.caption.55}%
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Atualizada a página da aplicação - Experiência 03\relax }}{15}{figure.caption.57}%
+\contentsline {figure}{\numberline {2.25}{\ignorespaces \emph {Query} SQL depois de atualizada a página da aplicação - Experiência 03\relax }}{15}{figure.caption.58}%
+\contentsline {figure}{\numberline {2.26}{\ignorespaces Single Point of Failure - Experiência 03\relax }}{16}{figure.caption.61}%
+\contentsline {figure}{\numberline {2.27}{\ignorespaces Configuração do HAProxy - Experiência 04\relax }}{16}{figure.caption.63}%
+\contentsline {figure}{\numberline {2.28}{\ignorespaces Configuração do KeepAlived - Experiência 04\relax }}{17}{figure.caption.65}%
+\contentsline {figure}{\numberline {2.29}{\ignorespaces Variável de ambiente DB\_HOST - Experiência 04\relax }}{17}{figure.caption.67}%
+\contentsline {figure}{\numberline {2.30}{\ignorespaces Esquema - Experiência 04\relax }}{17}{figure.caption.68}%
+\contentsline {figure}{\numberline {2.31}{\ignorespaces Esquema com \emph {failover} - Experiência 04\relax }}{18}{figure.caption.69}%
+\contentsline {figure}{\numberline {2.32}{\ignorespaces \emph {Announcements} do HAProxy01 e HAProxy03 - Experiência 04\relax }}{18}{figure.caption.72}%
+\contentsline {figure}{\numberline {2.33}{\ignorespaces Troca de \emph {MASTER} e \emph {BACKUP} - Experiência 04\relax }}{18}{figure.caption.74}%
+\contentsline {figure}{\numberline {2.34}{\ignorespaces Reativado serviço HAProxy em HAProxy03 - Experiência 04\relax }}{19}{figure.caption.76}%
+\addvspace {10\p@ }
