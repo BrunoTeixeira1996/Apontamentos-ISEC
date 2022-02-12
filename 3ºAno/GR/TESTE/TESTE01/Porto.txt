@@ -1,0 +1,75 @@
+Porto#sh run
+Building configuration...
+
+Current configuration : 839 bytes
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Porto
+!
+!
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 192.168.2.254 255.255.255.128
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/0
+ ip address 10.0.0.6 255.255.255.252
+ clock rate 56000
+!
+interface Serial0/1
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ redistribute rip subnets 
+ network 10.0.0.4 0.0.0.3 area 0
+!
+router rip
+ version 2
+ redistribute ospf 1 metric 10 
+ network 192.168.2.0
+ no auto-summary
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
