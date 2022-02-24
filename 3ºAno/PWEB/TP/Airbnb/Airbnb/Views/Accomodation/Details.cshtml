@@ -1,0 +1,89 @@
+﻿    @model Airbnb.Models.Accomodation
+
+        @{
+            ViewData["Title"] = Html.DisplayFor(model => model.Name);
+        }
+
+        <h1>@Html.DisplayFor(model => model.Name)</h1>
+        <hr />
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                @{ bool first = true; }
+                @foreach (var picture in Model.AccomodationImages)
+                {
+                    if (first)
+                    {
+                        <div class="carousel-item active text-center bg-secondary" style="height: 40em">
+                            <img class="mw-100 mh-100 m-auto py-2" src="data:@picture.FileType;base64,@Convert.ToBase64String(picture.Data, 0, picture.Data.Length)" alt="First slide">
+                        </div>
+
+                        first = false;
+                        continue;
+                    }
+                    <div class="carousel-item text-center bg-secondary" style="height: 40em">
+                        <img class="mw-100 mh-100 m-auto py-2" src="data:@picture.FileType;base64,@Convert.ToBase64String(picture.Data, 0, picture.Data.Length)" alt="Second slide">
+                    </div>
+                }
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <hr />
+
+        <div class="container-fluid text-left d-flex flex-column">
+            <p><span class="mr-3 text-center font-weight-bold">@Html.DisplayNameFor(model => model.Category):</span> @Html.DisplayFor(model => model.Category.Name)</p>
+            <p><span class="mr-3 text-center font-weight-bold">@Html.DisplayNameFor(model => model.Location):</span> @Html.DisplayFor(model => model.Location)</p>
+            <p><span class="mr-3 text-center font-weight-bold">@Html.DisplayNameFor(model => model.PricePerNight):</span> @Html.DisplayFor(model => model.PricePerNight)&euro;</p>
+
+            <div class="container-fluid pl-0">
+                <span class="mr-3 text-center font-weight-bold">Availability:</span>
+                <span class="mx-1 badge badge-primary text-center">@Html.DisplayFor(model => model.AvailableFrom)</span>
+                <span class="mx-1 badge badge-primary text-center">@Html.DisplayFor(model => model.AvailableUntil)</span>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="container-fluid text-left d-flex flex-column">
+            <h2>Description</h2>
+
+            <p>@Html.DisplayFor(model => model.Description)</p>
+        </div>
+
+        <hr />
+        <div class="container-fluid text-left d-flex flex-column">
+            <h2>Ratings</h2>
+
+            @foreach (var rating in Model.AccomodationRatings)
+            {
+                <div class="card my-2">
+                    <h5 class="card-header">@rating.Customer.Name</h5>
+                    <p class="card-text p-3">@rating.Comment</p>
+                </div>
+            }
+        </div>
+ 
+        <hr />
+        @if (User.IsInRole("Customer"))
+        {
+            <div class="container-fluid text-left d-flex flex-column">
+            @using (Html.BeginForm("CreateFromDetails", "AccomodationRatings"))
+            {
+                <h2>Leave a Rating</h2>
+
+                <textarea class="form-control" name="Comment"></textarea>
+                <input type="hidden" name="AccomodationId" value="@Model.AccomodationId" />
+                <input class="btn btn-primary mt-2 ml-auto mr-0 w-25" type="submit" value="Submit" />
+            }
+
+                <input type="button" class="btn btn-success mt-5" value="Book Now!" onclick="@("window.location.href='" + Url.Action("CreateFromDetails", "Bookings", new { id = @Model.AccomodationId }) + "'");" />
+            </div>
+        }
+

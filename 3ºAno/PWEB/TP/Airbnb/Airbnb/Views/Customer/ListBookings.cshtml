@@ -1,0 +1,50 @@
+﻿@model List<Airbnb.Models.Booking>
+
+@{
+    ViewData["Title"] = "My Reservations";
+}
+
+<h1>My Reservations</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Accomodation
+            </th>
+            <th>
+                From
+            </th>
+            <th>
+                Until
+            </th>
+            <th>
+                Reservation Status
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <a asp-controller="Accomodation" asp-action="Details" asp-route-id="@item.AccomodationId">@item.AccomodationId</a>
+            </td>
+            <td>
+                @Html.DisplayFor(a => item.BookingFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(a => item.BookingUntil)
+            </td>
+            <td>
+                @Html.DisplayFor(a => item.Status)
+            </td>
+            <td>
+                <a class="btn btn-danger" asp-action="Delete" asp-controller="Bookings" asp-route-id="@item.BookingId">Cancel</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

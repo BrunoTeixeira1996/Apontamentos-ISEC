@@ -1,0 +1,42 @@
+﻿@model Airbnb.Models.Employee
+
+@{
+    ViewData["Title"] = @Html.DisplayFor(model => model.ApplicationUser.FirstName);
+}
+
+<h1>@Html.DisplayFor(model => model.ApplicationUser.FirstName) @Html.DisplayFor(model => model.ApplicationUser.LastName)</h1>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Accomodation Id
+            </th>
+            <th>
+                Accomodation Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Accomodations)
+        {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.AccomodationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <a class="mx-1 btn btn-danger text-center" asp-action="RemoveAccomodationFromEmployee" asp-controller="Manager" asp-route-id="@item.AccomodationId">Remove from Accomodation</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<a class="mx-1 btn btn-success text-center" asp-action="EmployeeToAccomodation" asp-controller="Manager" asp-route-id="@Model.EmployeeId">Add to Accomodation</a>
+
+<a class="mx-1 btn btn-secondary text-center" asp-controller="Manager" asp-action="ListEmployees">Back to List</a>

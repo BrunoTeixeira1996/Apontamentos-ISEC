@@ -1,0 +1,51 @@
+﻿@model List<Airbnb.Models.Accomodation>
+
+@{
+    ViewData["Title"] = "My Accommodations";
+}
+
+@if (User.IsInRole("Manager"))
+{
+    <div class="container-fluid d-flex align-content-end justify-content-end mb-3">
+        <a class="btn btn-primary" asp-action="Create" asp-controller="Accomodation">Add new Accommodation</a>
+    </div>
+}
+
+@foreach (var item in Model)
+{
+    <div class="card">
+        <h5 class="card-header">@item.Name</h5>
+
+        <div class="card-body">
+            <div class="d-inline-flex flex-row">
+                @foreach (var picture in item.AccomodationImages)
+                {
+                    <img class="card-img" src="data:@picture.FileType;base64,@Convert.ToBase64String(picture.Data, 0, picture.Data.Length)" alt="test" style="width: 12rem;" />
+                    break;
+                }
+
+                <div class="container-fluid">
+                    <span class="card-text align-text-top">@item.Description</span>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-between">
+                <div class="d-flex align-items-center justify-content-between">
+                    <span class="mx-3 card-text text-center">Availability:</span>
+                    <span class="mx-1 badge badge-primary text-center">@item.AvailableFrom</span>
+                    <span class="mx-1 badge badge-primary text-center">@item.AvailableUntil</span>
+                </div>
+                <div class="row align-items-center">
+                    <a class="mx-1 btn btn-primary text-center" asp-controller="Accomodation" asp-action="Details" asp-route-id="@item.AccomodationId">Details</a>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                    {
+                        <a class="mx-1 btn btn-warning text-center" asp-controller="Accomodation" asp-action="Edit" asp-route-id="@item.AccomodationId">Edit</a>
+
+                        <a class="mx-1 btn btn-danger text-center" asp-controller="Accomodation" asp-action="Delete" asp-route-id="@item.AccomodationId">Delete</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+}

@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Airbnb.Models.Booking>
+
+@{
+    ViewData["Title"] = "Manage Bookings";
+}
+
+<h1>Booking Requests</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingUntil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Accomodation)
+            </th>
+            <th>
+                Customer Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewBag.flag == true)
+        {
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookingFrom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookingUntil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Accomodation.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.ApplicationUser.FirstName)
+                </td>
+                <td>
+                    <div class="d-flex flex-row justify-content-around">
+                        @using (Html.BeginForm("ManageBookingsAccept", "Employees", FormMethod.Post))
+                        {
+                            <input type="hidden" name="Accomodation" value="@item.Accomodation" />
+                            <input type="hidden" name="AccomodationId" value="@item.AccomodationId" />
+                            <input type="hidden" name="BookingFrom" value="@item.BookingFrom" />
+                            <input type="hidden" name="BookingUntil" value="@item.BookingUntil" />
+                            <input type="hidden" name="BookingId" value="@item.BookingId" />
+                            <input type="hidden" name="CustomerId" value="@item.CustomerId" />
+                            <input type="submit" class="btn btn-primary" value="Accept" />
+                        }
+                        @using (Html.BeginForm("ManageBookingsRefuse", "Employees", FormMethod.Post))
+                        {
+                            <input type="hidden" name="Accomodation" value="@item.Accomodation" />
+                            <input type="hidden" name="AccomodationId" value="@item.AccomodationId" />
+                            <input type="hidden" name="BookingFrom" value="@item.BookingFrom" />
+                            <input type="hidden" name="BookingUntil" value="@item.BookingUntil" />
+                            <input type="hidden" name="BookingId" value="@item.BookingId" />
+                            <input type="hidden" name="CustomerId" value="@item.CustomerId" />
+                            <input type="submit" class="btn btn-secondary" value="Refuse" />
+                        }
+
+                        <a class="btn btn-danger" asp-controller="Bookings" asp-action="Delete" asp-route-id="@item.BookingId">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
+
+        }
+    </tbody>
+</table>

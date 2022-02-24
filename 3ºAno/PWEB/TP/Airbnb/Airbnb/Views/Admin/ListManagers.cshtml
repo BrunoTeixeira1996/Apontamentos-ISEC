@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Airbnb.Models.Manager>
+
+@{
+    ViewData["Title"] = "List of Managers";
+}
+
+<h1>List of Managers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.ApplicationUser.FirstName
+            </td>
+            <td>
+                @item.ApplicationUser.LastName
+            </td>
+            <td>
+                <a class="mx-1 btn btn-primary text-center" asp-action="ManagerDetails" asp-route-id="@item.ManagerId">Details</a>
+                <a class="mx-1 btn btn-danger text-center" asp-action="Delete" asp-controller="Manager" asp-route-id="@item.ManagerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

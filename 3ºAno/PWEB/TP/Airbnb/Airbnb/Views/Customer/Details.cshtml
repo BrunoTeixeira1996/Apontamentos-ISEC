@@ -1,0 +1,82 @@
+﻿@model Airbnb.Models.CustomerViewModel
+
+@{
+    ViewData["Title"] = Model.Customer.ApplicationUser.FirstName + " " +  Model.Customer.ApplicationUser.LastName;
+}
+
+<h2>@Model.Customer.ApplicationUser.FirstName @Model.Customer.ApplicationUser.LastName</h2>
+
+<hr/>
+
+<h3>Bookings</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                From
+            </th>
+            <th>
+                Until
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                Accomodation Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Bookings)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookingFrom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookingUntil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Accomodation.Name)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Ratings</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Accomodation Id
+            </th>
+            <th>
+                Comment
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AccomodationRatings)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccomodationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a class="mx-1 btn btn-secondary text-center" asp-controller="Admin" asp-action="ListCustomers">Back to List</a>
+</div>

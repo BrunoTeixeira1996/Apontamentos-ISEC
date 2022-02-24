@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Airbnb.Models.Accomodation>
+
+@{
+    ViewData["Title"] = "Catalogue";
+}
+
+
+@foreach (var item in Model)
+{
+    <div class="card">
+        <h5 class="card-header">@item.Name</h5>
+
+        <div class="card-body">
+            <div class="d-inline-flex flex-row">
+                <div>
+                    @foreach (var picture in item.AccomodationImages)
+                    {
+                        <img class="card-img" src="data:@picture.FileType;base64,@Convert.ToBase64String(picture.Data, 0, picture.Data.Length)" alt="test" style="width: 12rem;" />
+                        break;
+                    }
+                </div>
+                <div class="container-fluid">
+                    <span style="white-space: pre-line" class="card-text align-text-top">@item.Description</span>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-between">
+                <div class="d-flex align-items-center justify-content-between">
+                    <span class="mx-3 card-text text-center">Availability:</span>
+                    <span class="mx-1 badge badge-primary text-center">@item.AvailableFrom</span>
+                    <span class="mx-1 badge badge-primary text-center">@item.AvailableUntil</span>
+                </div>
+                <div class="row align-items-center">
+                    <a class="mx-1 btn btn-primary text-center" asp-action="Details" asp-route-id="@item.AccomodationId">Details</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a class="mx-1 btn btn-danger text-center" asp-action="Delete" asp-route-id="@item.AccomodationId">Delete</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+}
+
+

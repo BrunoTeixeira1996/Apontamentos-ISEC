@@ -1,4 +1,4 @@
-# Aula 08/11/2021 (Rascunho)
+# Aula 08/11/2021
 
 - O Razor é a mistura entre C# e html
 

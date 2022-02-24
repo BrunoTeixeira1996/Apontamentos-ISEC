@@ -1,0 +1,41 @@
+﻿@model List<Airbnb.Models.AccomodationRating>
+
+@{
+    ViewData["Title"] = "My Ratings";
+}
+
+<h1>My Ratings</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Accomodation
+            </th>
+            <th>
+                Comment
+            </th>
+            <th>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <a asp-controller="Accomodation" asp-action="Details" asp-route-id="@item.AccomodationId">@item.AccomodationId</a>
+            </td>
+            <td>
+                @Html.DisplayFor(a => item.Comment)
+            </td>
+            <td>
+                <a class="btn btn-danger" asp-action="Delete" asp-controller="AccomodationRatings" asp-route-id="@item.AccomodationRatingId">Delete</a>
+            </td>
+        </tr>
+
+        }
+    </tbody>
+</table>
